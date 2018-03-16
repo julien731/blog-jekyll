@@ -1,0 +1,27 @@
+title: Julien Liabeuf
+description: I am a Bangkok-based Business Developer and Product Manager. On this blog, I share my thoughts on business and IT."
+
+url: https://julienliabeuf.com
+baseurl: ""
+paginate_path: "blog/page/:num/"
+permalink: :title/
+
+markdown: kramdown
+highlighter: rouge
+gems: [jekyll-paginate]
+paginate: 5
+
+navigation:
+ - title: Home
+   url: /
+ - title: About
+   url: /about
+ - title: Contact
+   url: /contact
+
+social:
+   github: julien731
+   twitter: julien731
+   email: julien@liabeuf.fr
+
+google_analytics: ""
