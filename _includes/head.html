@@ -3,7 +3,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
-    <title>{{ page.title }}</title>
+    <title>
+      {% if page.title %}
+        {% if page.url == "/" %}
+          {{ page.title | escape }} - {{ site.tagline | escape }}
+        {% else %}
+          {{ page.title | escape }} - {{ site.title | escape }}
+        {% endif %}
+      {% else %}{{ site.title | escape }}{% endif %}
+    </title>
 
     <!-- Open Graph Meta -->
     <meta content="{{ site.title }}" property="og:site_name">
