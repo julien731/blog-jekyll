@@ -1,0 +1,48 @@
+---
+layout: post
+title: PhpStorm and PHPCodeSniffer on Windows
+date: 2016-10-18 12:03:58.000000000 +07:00
+categories:
+- How To
+- Web Development
+- WordPress
+tags:
+- clean code
+- coding standards
+---
+<p class="intro">I've been wanting to get onto PHPCS for quite some time now. While reading a blog post discussing it, I decided it was now or never. I should have started using PHPCS a while ago anyway...</p>
+
+<p>So, in order to get things up and running, I did a quick Google search and ended up finding a pretty good tutorial, except that it is slightly outdated. Some of the instructions did not match the latest version of PhpStorm.</p>
+
+<p>The article is <a href="http://w3guy.com/setup-php-code-sniffer-phpstorm-windows/">How to Setup PHP Code Sniffer in Phpstorm on a Windows Machine</a> from W3Guy.com.</p>
+
+<p><strong>NOTE:</strong> At the time of writing this article, I was running PhpStorm version <strong>2016.2.1</strong>.</p>
+
+<p>Most of the instructions are correct, except for a couple of them. Here is an updated version of the outdated steps. Also, you'll need to have <a href="https://julienliabeuf.com/installing-pear-windows/">PEAR installed on your local machine</a> beforehand.</p>
+
+<h3>Step 2</h3>
+
+<p>You will actually need to copy all the <em>WordPress-xxx</em> directories in CodeSniffer's <em>Standards</em> directory as they rely on one another (otherwise you'll get errors in PhpStorm).</p>
+
+<p>Also, because I'm only using standard PHP on my local machine (no XAMPP or any pre-packaged web server), PHPCS was located in <em>C:\php\pear\PHP\CodeSniffer</em>.</p>
+
+<h3>Step 4</h3>
+
+<p>The setting you're looking for is now located in <em>Languages &amp; Frameworks | PHP | Code Sniffer</em>.</p>
+
+<p><img src="{{ site.baseurl }}/assets/img/phpcs-configuration.png" alt=""></p>
+
+<p>Again, because I'm using <em>"raw"</em> PHP, the path to PHPCS was actually <em>C:\php\phpcs.bat</em>.</p>
+
+<p><img src="{{ site.baseurl }}/assets/img/phpcs-path.png" alt=""></p>
+
+<h3>Step 5</h3>
+
+<p>The <em>Inspection</em> settings are now in <em>Editor | Inspections | PHP Code Sniffer validation</em>.</p>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/phpcs-validation.png" alt=""> 
+    <figcaption>PHP CodeSniffer Validation</figcaption>
+</figure>
+
+<p>That's it. The rest of W3Guy's tutorial worked perfectly. Time to deal with those extra warnings now!</p>

@@ -1,0 +1,47 @@
+---
+layout: post
+title: Rescue Code Now Available in WP Google Authenticator
+date: 2014-01-25 13:41:44.000000000 +07:00
+categories:
+- Projects
+- WordPress
+- WP Google Authenticator
+tags:
+- 2-factor
+- 2FA
+- google authenticator
+- security
+---
+<p><a href="http://wordpress.org/plugins/wp-google-authenticator/" target="_blank">WP Google Authenticator</a> has just been updated to version 1.0.4. This new version only brings <del>one change</del> few changes, but it's a pretty big one.</p>
+
+<h2>Account Recovery</h2>
+
+<p>There was one feature missing to the plugin until now: a way for users to log in their site even if they can't access the Google Authenticator app. If you just changed your phone for instance: you re-install the app, but you don't have all your profiles anymore. You're locked out of your site.</p>
+
+<p>With the new recovery feature, when you activate <abbr title="2-factor authentication">2FA</abbr> for your account, a recovery code is automatically generated.</p>
+
+<figure>
+  <img src="{{ site.baseurl }}/assets/img/recovery-code.jpg" alt="WP Google Authenticator Recovery Code Feature"> 
+  <figcaption>WP Google Authenticator Recovery Code Feature</figcaption>
+</figure>
+
+<p>After you generated the recovery code, it will appear in your profile for 5 minutes. After that delay, you can always see your recovery code, but you will need to enter your WordPress account password before you can see it.</p>
+
+<p>Now, if you have to use this code in a situation where you can't use the Authenticator app, you will be logged in just as usual, but  <abbr title="2-factor authentication">2FA</abbr> will be disabled for your account.</p>
+
+<figure>
+  <img src="{{ site.baseurl }}/assets/img/2fa-deactivation-notice.jpg" alt="2FA Deactivation Notice"> 
+  <figcaption>2FA Deactivation Notice</figcaption>
+</figure>
+
+<p>Next step is to go to your profile page and re-enable 2-factor authentication. You will setup the new account on your phone, and you're good to go.</p>
+
+<h2>New Filters</h2>
+
+<p>Version 1.0.4 introduces 3 filters that might be useful for advanced users of the plugin:</p>
+
+<ul>
+  <li><code>wpga_secret_key_length</code>: allows you to change the secret key length. Default is set to 16.</li>
+  <li><code>wpga_code_length</code>: alows you to change the length of the TOTP. Default is set to 6.</li>
+  <li><code>wpga_recovery_code_length</code>: allows you to change the recovery code length. Default is set to 24.</li>
+</ul>

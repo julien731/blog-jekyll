@@ -1,0 +1,98 @@
+---
+layout: post
+title: Setup Ubuntu Server with SFTP
+date: 2014-04-12 11:00:14.000000000 +07:00
+categories:
+- How To
+description: This first post of the series "Cloud Hosting with DigitalOcean" will show
+  you how to setup a droplet with Ubuntu 12.04 and SFTP.
+---
+<p class="intro">This article is the first one of a series about how to setup a cloud server server running Ubuntu 12.04. This server will be used to run multiple sites. Essentially Ghost blogs and WordPress sites.</p>
+
+<h2>Why DigitalOcean</h2>
+
+<p>Beforehand, just a few words about why I chose DigitalOcean:</p>
+
+<ul>
+  <li>Their service seems high level,</li>
+  <li>All plans include SSD,</li>
+  <li>Very aggressive pricing,</li>
+  <li>The interface is dead simple,</li>
+  <li>You really are up and running in less than a minute</li>
+</ul>
+
+<h2>Create a Droplet</h2>
+
+<p>The first thing to do is to create a Droplet. Their process is really well done and very clear.</p>
+
+<p>As I want to be able to host multiple sites on this droplet, I didn't go with an Application image, but with a classic Ubuntu 12.04 x64 instead.</p>
+
+<p>Their "55 seconds setup" is really not a lie. You really have your droplet up and running in less than a minute. It' pretty impressive.</p>
+
+<h2>Setup SFTP</h2>
+
+<p>I've heard so many times that FTP is a very insecure protocol that I didn't want to take any risk on this instance. I wanted to go with SFTP from the beginning and started to dig for tutorials on how to install ProFTPd with SFTP enabled.</p>
+
+<p>After spending some time trying, I finally came across a very interesting post which basically said: no need for ProFTPd. As long as you can SSH into the server, you can SFTP as well.</p>
+
+<p>I kept searching in that direction and here is what I came up with: create my users in Ubuntu, set their home directory, add them to a group, give the group the right permissions and that's it!</p>
+
+<h3>Create a Web Directory</h3>
+
+<p>First of all, let's create the directory. We will simply usr <code>/var/www</code> here. Try:</p>
+
+{% highlight bash %}
+cd /var/www
+{% endhighlight %}
+
+<p>If you get an error message saying the directory doesn't exist, create it by typing</p>
+
+{% highlight bash %}
+mkdir /var/www
+{% endhighlight %}
+
+<p>Our web directory is now ready.</p>
+
+<h3>Add Users</h3>
+
+<p>It's now time to add the desired users. For whatever reason I was not able to create a user and assign it a group at the same time. I had to do it in 2 steps.</p>
+
+{% highlight bash %}
+sudo adduser newuser
+usermod -a -G www-data newuser
+{% endhighlight %}
+
+<p>Now that the user was created, you can possibly give him root privileges if this user is an admin. See <em>"How to Grant a User Root Privileges"</em> in <a href="https://www.digitalocean.com/community/articles/how-to-add-and-delete-users-on-ubuntu-12-04-and-centos-6" target="_blank">this tutorial</a>.</p>
+
+<p>Last step for user creation is to change their home directory. The user's home directory is where he will land when reaching the server through SFTP.</p>
+
+{% highlight bash %}
+sudo usermod -d /var/www/ username
+{% endhighlight %}
+
+<h4>Sources</h4>
+
+<ul>
+  <li><a href="https://www.digitalocean.com/community/articles/how-to-add-and-delete-users-on-ubuntu-12-04-and-centos-6" target="_blank">https://www.digitalocean.com/community/articles/how-to-add-and-delete-users-on-ubuntu-12-04-and-centos-6</a></li>
+  <li><a href="http://www.cyberciti.biz/faq/ubuntu-add-user-to-group/" target="_blank">http://www.cyberciti.biz/faq/ubuntu-add-user-to-group/</a></li>
+  <li><a href="http://ubuntuforums.org/showthread.php?t=1449220" target="_blank">http://ubuntuforums.org/showthread.php?t=1449220</a></li>
+</ul>
+
+<h3>Set the Permissons</h3>
+
+<p>That's a pretty big part we have done so far. What you are now able to do is to connect to your server via SFTP, and land into the <code>www</code> directory. However, you will not be able to do anything here as you won't have permissions. We're going to fix this now.</p>
+
+{% highlight bash %}
+sudo chgrp -R www-data /var/www/*
+sudo chmod -R g+rw /var/www
+sudo chown -R username:username /var/www/*
+find /var/www -type d -print0 | sudo xargs -0 chmod g+s
+{% endhighlight %}
+
+<h4>Source</h4>
+
+<ul>
+  <li><a href="http://askubuntu.com/questions/19898/whats-the-simplest-way-to-edit-and-add-files-to-var-www" target="_blank">http://askubuntu.com/questions/19898/whats-the-simplest-way-to-edit-and-add-files-to-var-www</a></li>
+</ul>
+
+<p>Here we are. You now have a cloud server that you can access via SFTP! Just open your FTP client and reach sftp://yourip on port 22 using the username and password you setup earlier.</p>

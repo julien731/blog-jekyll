@@ -1,0 +1,59 @@
+---
+layout: post
+title: Get More Reviews of your WordPress Theme or Plugin
+date: 2016-07-03 23:32:47.000000000 +07:00
+categories:
+- Web Development
+- WordPress
+tags:
+- library
+- php
+- work
+---
+<p>So you just got this new WordPress theme or plugin approved by the review team. Exciting!</p>
+
+<p>You get your first downloads and you watch the stats all the time. What are you waiting for? We all know it: reviews! Especially 5 stars reviews ;)</p>
+
+<h2>Reviews are Everything</h2>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/Ll7WneD.png" alt=""> 
+    <figcaption>WordPress Plugin Reviews</figcaption>
+</figure>
+
+<p>Indeed, reviews are often what convinces the user to use your product... or not. That's why all authors are striving for good reviews.</p>
+
+<p>There is another thing we all know, though: unsatisfied users tend to review more than satisfied users. This means that you can easily end up with some bad reviews even though your product is good and the majority of users are happy.</p>
+
+<p>What can you do about?</p>
+
+<p>It may sound simple (and it is) but you just need to ask your users to review your product.</p>
+
+<h2>WP Review Me</h2>
+
+<p>This is where <a href="https://github.com/julien731/WP-Review-Me">this small library I wrote</a> becomes your best marketing tool!</p>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/mGB6yqB.png" alt=""> 
+    <figcaption>WP Review Me</figcaption>
+</figure>
+
+<p>It does a very simple job: X days (you can configure X) after the theme/plugin was installed, the user will be prompted to leave a review on WordPress.org.</p>
+
+<p>Technically speaking, you can create this prompt with one single line of code:</p>
+
+{% highlight php %}
+new WRM_WordPress( array( 'type' => 'plugin', 'slug' => 'my-plugin' ) );
+{% endhighlight %}
+
+<p>The library also has a number of advanced parameters that will let you customize about anything (notice message, link label, etc). All those are explained <a href="https://github.com/julien731/WP-Review-Me/wiki">on the wiki page of the GitHub repository</a>.</p>
+
+<h3>Incentives</h3>
+
+<p><del>Just asking users to review your plugin might not be enough, though. Sometimes, users need to get something back for giving you a helping hand. This is where the various integrations come into play (well, only one for the moment, but more to come).</del></p>
+
+<p><strong>EDIT:</strong> Initially, this library did integrate with Easy Digital Downloads to offer a discount in exchange for a review. Unfortunately, the WordPress review team believes that doing so would lead to biased reviews and asked me to remove this feature. I am definitely not trying to challenge the community so I abode by their request. More details here: <a href="https://github.com/julien731/WP-Review-Me/issues/3">https://github.com/julien731/WP-Review-Me/issues/3</a></p>
+
+<h2>Up Next</h2>
+
+<p>The library does what I need it to do, so improvements will only come if asked. Feel free to add issues to the GitHub repository or submit your PRs ;) <a href="https://github.com/julien731/WP-Review-Me">https://github.com/julien731/WP-Review-Me</a></p>

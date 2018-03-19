@@ -1,0 +1,122 @@
+---
+layout: post
+title: Install Nginx with Server Blocks
+date: 2014-04-12 16:28:22.000000000 +07:00
+categories:
+- How To
+tags:
+- digitalocean
+- ghost
+- nginx
+- server block
+- ubuntu
+description: This tutorial shows how to install Nginx with server blocks in order to be
+  able to host multiple sites on the same droplet.
+---
+<p>One very important thing with the droplet I setup on DigitalOcean is to be able to host multiple sites. Hence, we're going to use Server Blocks (the equivalent of Virtual Hosts on Apache).</p>
+
+<p>I found and tried several tutorials on how to create Server Blocks and I ended up creating my own "method" based on all the resources I found.</p>
+
+<p>Ghost is the first thing I will host and in most tutorials I've been told to setup Node.js, Ghost and then Nginx. However, I found it better to start with Nginx and then do the rest.</p>
+
+<h2>Setup your Domain Hosts</h2>
+
+<p>First things first, make sure your domain is setup correctly. Wether you use the root domain or a subdomain, make sure the A record points to your server's IP address.</p>
+
+<h2>Create a New Directory</h2>
+
+<p>We now need to create the directory where the site will be hosted. In this example, I'll use <code>domain.com</code> as the domain.</p>
+
+{% highlight bash %}
+mkdir /var/www/domain.com
+{% endhighlight %}
+
+<h2>Install Nginx</h2>
+
+<p>In your SSH terminal, type the following line to install Nginx</p>
+
+{% highlight bash %}
+apt-get install nginx
+{% endhighlight %}
+
+<p>Now let's delete the default configuration file, then we will create our own.</p>
+
+{% highlight bash %}
+rm /etc/nginx/sites-available/default
+{% endhighlight %}
+
+<h3>Sources</h3>
+
+<ul>
+  <li><a href="https://www.digitalocean.com/community/articles/how-to-host-ghost-with-nginx-on-digitalocean" target="_blank">https://www.digitalocean.com/community/articles/how-to-host-ghost-with-nginx-on-digitalocean</a></li>
+</ul>
+
+<h2>Create a Server Blocks File</h2>
+
+<p>For the configuration file, I mostly based my settings on the <a href="http://wiki.nginx.org/ServerBlockExample" target="_blank">Nginx documentation</a>.</p>
+
+<p>We can now create our configuration file.</p>
+
+{% highlight bash %}
+sudo nano /etc/nginx/sites-available/blocks
+{% endhighlight %}
+
+<p>I called it <code>blocks</code> in this example, but you can of course call it whatever you want.</p>
+
+<p>This line will open the text editor in which we will input the custom configuration.</p>
+
+<h3>Sources</h3>
+
+<ul>
+  <li><a href="http://wiki.nginx.org/ServerBlockExample" target="_blank">http://wiki.nginx.org/ServerBlockExample</a></li>
+</ul>
+
+<h2>Create the Blocks</h2>
+
+<p>There are many ways of configuring a block. As of now I have only done it for Ghost, so here is what you need for it. However, if you refer to the Nginx documentation you will find all the basic elements for a block.</p>
+
+<p><strong>Note:</strong> When editing a file with nano, you can save the changes by pressing Ctrl+O (Ctrl right). Press Ctrl+X to exit.</p>
+
+<h3>Ghost</h3>
+
+{% highlight bash %}
+server {
+  listen 0.0.0.0:80;
+  server_name domain.com;
+  access_log /var/log/nginx/domain.com.log;
+
+  root /var/www/domain.com;
+  index index.html index.htm;
+
+  location / {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header HOST $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass http://127.0.0.1:2368;
+      proxy_redirect off;
+  }
+}
+{% endhighlight %}
+
+<p>Next step is to create a "symlink" to the directory <code>sites-enabled</code>. Indeed, <code>sites-available</code> only contains the available sites, it doesn't mean it's enabled.</p>
+
+{% highlight bash %}
+sudo ln -s /etc/nginx/sites-available/blocks /etc/nginx/sites-enabled/blocks
+{% endhighlight %}
+
+<p>Finally, let's restart Nginx.</p>
+
+{% highlight bash %}
+service nginx restart
+{% endhighlight %}
+
+<h3>Sources</h3>
+
+<ul>
+  <li><a href="https://www.digitalocean.com/community/articles/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3" target="_blank">https://www.digitalocean.com/community/articles/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3</a></li>
+  <li><a href="http://wiki.nginx.org/ServerBlockExample" target="_blank">http://wiki.nginx.org/ServerBlockExample</a></li>
+  <li><a href="http://gerardmcgarry.com/2010/setting-up-a-virtual-host-in-nginx/" target="_blank">http://gerardmcgarry.com/2010/setting-up-a-virtual-host-in-nginx/</a></li>
+</ul>
+
+<p>That's it. If everything went well, you should see the Nginx welcome page when browsing to domain.com.</p>

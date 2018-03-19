@@ -1,0 +1,66 @@
+---
+layout: post
+title: Installing PEAR on Windows
+date: 2016-08-16 16:44:51.000000000 +07:00
+categories:
+- How To
+- Web Development
+tags:
+- php
+- windows
+---
+<p class="intro">I have been using phpDocumentor on my Windows laptop lately, and one of the requirements is to have PEAR installed. While this is a pretty simple process on Linux, it gets a little more complex on Windows.</p>
+
+<p>Actually, it is not that complex. It is just difficult to find the proper resources (or at least it was for me).</p>
+
+<p>I did find a number of posts / tutorials explaining the manual process of installing PEAR, but:</p>
+
+<ol>
+  <li>It introduces possibilities of mishaps,</li>
+  <li>I prefer when things are automated ;)</li>
+</ol>
+
+<h2>Automatically Install PEAR on Windows</h2>
+
+<p>First of all, I should specify that this was done on a Windows 10 Home x64 install with PHP 7.0.6. No WAMP, no MAMP, just PHP.</p>
+<p>There are basically 2 steps required to install PEAR:</p>
+
+<ol>
+  <li>Download the "installer"</li>
+  <li>Run it</li>
+  <li>Add the environment variables (yeah that's more than 2 steps, but this one is optional. Bonus!)</li>
+</ol>
+
+<h3>Download go-pear.phar</h3>
+
+<p>PHP.net provides a super handy <code>phar</code> file that will allow you to install PEAR on your system in just one command line. <a href="https://pear.php.net/go-pear.phar">Download go-pear.phar</a> and save it in your PHP directory (most likely <code>C:\php</code>).</p>
+
+<h3>Run go-pear.phar</h3>
+
+<p>The next step is to use <code>go-pear.phar</code> to install PEAR. Simply open up a command prompt, move to your PHP directory, and type:</p>
+
+{% highlight php %}
+php go-pear.phar
+{% endhighlight %}
+
+<p>You should then be asked if you want to go for a local or system-wide install. I needed a system-wide install, so this entire tutorial is based on this scenario.</p>
+
+<p>Now, just let the script do its job...</p>
+<p><iframe width="853" height="480" src="https://www.youtube.com/embed/aRbdqvfQmLs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+
+<p>Unlike me, you should not be getting the message <em>"WARNING! Old version found at C:\php [...]"</em>. I re-installed PEAR for the purpose of this tutorial, which is why I'm getting this warning.</p>
+
+<h3>Add the Environment Variables</h3>
+
+<p>As you can see at the end of the process, the script tells you:</p>
+
+<blockquote>
+  For convenience, a REG file is available under C:\phpPEAR_ENV.reg. This file creates ENV variables for the current user.
+</blockquote>
+
+<p>If you go to <code>C:\php</code> and double-click <code>PEAR_ENV.reg</code> (a warning should appear, just click yes), the script will add all the required environment variables to your system.</p>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/windows-environment-variables.png" alt=""> 
+    <figcaption>Windows Environment Variables</figcaption>
+</figure>

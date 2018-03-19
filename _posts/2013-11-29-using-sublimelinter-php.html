@@ -1,0 +1,43 @@
+---
+layout: post
+title: Using SublimeLinter with PHP
+date: 2013-11-29 22:22:39.000000000 +07:00
+categories:
+- Web Development
+tags:
+- ide
+- linter
+- sublime
+- testing
+---
+<p>I lost a considerable amount of time today.</p>
+
+<p>I'm completely new to Linters. I've read about it lately, and I felt dumb I didn't start using it earlier. It avoids loosing time on stupid mistakes (a forgotten coma, an extra closing parenthesis... you know!) and help keeping a cleaner code.</p>
+
+<p>I use Sublime as my IDE, and I love it, mostly for its package control. It makes installing a new addons easy as a breeze, and that's how I installed <a href="https://github.com/SublimeLinter/SublimeLinter" target="_blank">SublimeLinter</a>.</p>
+
+<h3>Installing SublimeLinter</h3>
+
+<p>Once you opened Sublime, press Ctrl+Shift+P (you must have the <a href="https://sublime.wbond.net/installation" target="_blank">Package Control installed</a>), find <em>"Package Control: Install Package"</em>. Search for <em>"SublimeLinter"</em> and install.</p>
+
+<p>So here I am, with SublimeLinter installed, and... well, nothing. I checked a few Youtube videos and what it does seems awesome, but it simply doesn't do anything for me. Quick Google search, nothing relevant. Actually, I ended up spending a quite a long time browsing, desperately looking for a solution.</p>
+
+<h3>SublimeLinter Settings</h3>
+
+<p>I finally found out what was wrong, and again, I felt dumb: it took me 1 minute after that to setup the plugin correctly. No more suspense, here is the missing config:</p>
+
+{% highlight json %}
+{
+  "sublimelinter_executable_map":
+    {
+      "php": "C:\wamp\bin\php\php5.4.12\php.exe"
+    },
+    "sublimelinter_mark_style": "outline"
+}
+{% endhighlight %}
+
+<p>Note that the double backslash is mandatory on Windows.</p>
+
+<p>When customizing the settings, do NOT edit the default settings, edit the user settings instead. You'll find it under <strong>Preferences &gt; Package Settings &gt; SublimeLinter &gt; Settings - User</strong>.</p>
+
+<p>In conclusion, here is my advice: open the default settings file for SublimeLinter and ready it carefully! It is very well documented and it would have saved me a lot of time to start with this.</p>

@@ -1,0 +1,66 @@
+---
+layout: post
+title: EasyEngine or How I Gained 1s in Page Load Time
+date: 2016-07-17 18:33:17.000000000 +07:00
+categories:
+- How To
+- Review
+- WordPress
+---
+<p class="intro">My blog has been hosted on various machines from various providers. It is only recently that I started to aim for performance, though.</p>
+
+<p>For the last couple of years, it has been hosted with <a href="https://www.evxonline.com">EvxOnline</a>. I then switched to a <a href="https://m.do.co/c/ec6e4c371cc6">DigitalOcean</a> (affiliate link, direct link available in article footer) droplet with <a href="https://www.serverpilot.io/?refcode=a333084ff878">ServerPilot</a>.</p>
+
+<p>While performance was definitely better with DigitalOcean + ServerPilot compared to EvxOnline, I wanted something even faster.</p>
+
+<p>I have had my eyes on <a href="https://easyengine.io">EasyEngine</a> for a little while but didn't have the chance to really try it yet. So the day I realized I made a typo in my ServerPilot's app name, fussy me didn't need another excuse to get started with a new stack.</p>
+
+<h2>EasyEngine vs ServerPilot</h2>
+
+<p>First of all, I need to say that I really like ServerPilot. I've used it for many client and personal projects. It is extremely easy to setup, the stack performs really well, and it keeps your server up to date. If you're looking for good performance without getting your hands too dirty, go for ServerPilot.</p>
+
+<p>If you want to push things a little further however, EasyEngine is, in my opinion, the way to go.</p>
+
+<p>In both cases, I used a $5, SFO1 droplet (512 Mo RAM, 20 Go storage, located in San Fransisco). I also use CloudFlare, even though it doesn't seem to make any difference with my new setup.</p>
+
+<p>The theme I use is exactly the same, as well as the plugins installed.</p>
+
+<h3>ServerPilot</h3>
+
+<p>ServerPilot uses a <a href="https://serverpilot.io/community/articles/how-serverpilot-configures-your-lamp-stack.html">modern and proven stack</a>: LAMP/LEMP with Nginx as the public facing web server proxying the request through to Apache.</p>
+
+<p>The blog was then loading in <strong>1.7 seconds</strong> in average (I didn't do any stress tests, just page load time).</p>
+
+<h3>EasyEngine</h3>
+
+<p>EasyEngine is a bit more complex to setup (actually, it is especially the case when transferring a site, installing from 0 seems pretty straightforward), but it is partly because of the number of options available. It is purely LEMP (no Apache here), although you have the option to install HHVM.</p>
+
+<p>I installed WordPress and got rid of WP Super Cache that is basically replaced by FastCGI. I ran the tests and surprise, the page load time is <strong>down to 0.8 seconds</strong>! (I know it is not exactly 1 second, but my first tests were showing 0.7s and 1s sounds pretty good :)</p>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/gtmetrix-948x1024.png" alt=""> 
+    <figcaption>GTmetrix Report</figcaption>
+</figure>
+
+<h2>Conclusion</h2>
+
+<p>Just like I wrote earlier, if you want performance without getting too much in the console, go for ServerPilot. You basically need to copy/paste one command and that's it. ServerPilot will do the rest.</p>
+
+<p>If you want to get high performance and are ready to spend more time in the console, EasyEngine is awesome. With very little customization it performs extremely well. Their site says:</p>
+
+<blockquote>
+  Automatically tweaks server configuration as per available hardware resources
+</blockquote>
+
+<p>I don't know what this implies exactly, but it seems to be working damn well.</p>
+
+<p>There is one thing I'm wondering about though: how come the performance improvement is that big? I mean, 1 second faster is quite impressive. I'd love to hear more from the EE team :)</p>
+
+<h4>Links</h4>
+
+<p>Some of the links in this article contain affiliate codes. If you wish to visit those links without my affiliate code, here is it.</p>
+
+<ul>
+  <li><a href="https://www.digitalocean.com">DigitalOcean</a></li>
+  <li><a href="https://www.serverpilot.io">ServerPilot</a></li>
+</ul>

@@ -1,0 +1,75 @@
+---
+layout: post
+title: Add 2-Factor Authentication to WordPress
+date: 2013-11-22 20:48:38.000000000 +07:00
+categories:
+- WordPress
+tags:
+- 2FA
+- google authenticator
+- security
+---
+<p><em>This article is both a security tip and a tutorial to my <a title="WP Google Authenticator" href="http://julienliabeuf.com/google-authenticator-wordpress/">WP Google Authenticator</a> plugin.</em></p>
+
+<p><strong>2-factor authentication</strong> is a simple and efficient way to enforce security for your WordPress site. This will ensure you only can login to the WordPress dashboard with your credentials.</p>
+
+<h2>What is 2-factor authentication and why use it?</h2>
+
+<p>It is also referred to as 2-step verification. The standard way to log in your WordPress dashboard is to use a classic username / password couple. The problem with this is that security is low. A lot of people are debating about this system, arguing that it should not be used anymore.</p>
+
+<p>There are two main possible ways for an attacker to get into your WordPress dashboard without too much difficulty:</p>
+
+<ol>
+  <li>Your login / password were stolen,</li>
+  <li>Your login / password are too weak and the attacker can brute force your login</li>
+</ol>
+
+<p>2-factor authentication enforces security by requesting a <strong>one time password</strong> in addition to the username / password couple. This one time password is based on the current time, that's what makes it unique. You will generally receive this password by e-mail, SMS or via a dedicated app.</p>
+
+<p>In our case, we will use a dedicated app: <a href="https://support.google.com/accounts/answer/1066447?hl=en" target="_blank">Google Authenticator</a>.</p>
+
+<p>EDIT: You can also use <a href="https://www.authy.com/" target="_blank">Authy</a> which is a pretty good app. Its main advantage being that you can sync your profiles between different devices (computer, phone, tablet...).</p>
+
+<p>This app, developed by Google, obviously, is available on iPhone, Android and Blackberry. Of course, this mean you will need to have your phone with you every time you need to login to your site.</p>
+
+<h2>WP Google Authenticator: Tutorial</h2>
+
+<h3>Download &amp; Install</h3>
+
+<p>First of all, obviously, download and install the plugin. You can find it on the WordPress Extend: <a href="http://wordpress.org/plugins/wp-google-authenticator/" target="_blank">WP Google Authenticator</a>, or search for "<em>WP Google Authenticator"</em> directly in your WordPress dashboard.</p>
+
+<h3>Setup the Plugin</h3>
+
+<p>Once installed and activated, the plugin will add a new sub-menu to the "Settings" item.</p>
+
+<p>Here you have just a few options. Enough to make your site more secure, and few enough to get it working in 2 minutes.</p>
+
+<figure>
+  <img src="{{ site.baseurl }}/assets/img/wp-google-authenticator-settings-1024x637.jpg" alt=""> 
+</figure>
+
+<p>Let's see all these options quickly:</p>
+
+<ol>
+  <li><strong>Activate the Plugin</strong>: pretty clear right? You can have the plugin installed but not active if you don't check this box,</li>
+  <li><strong>Force Use</strong>: if you run a multi-user site, you might want your users to enable 2FA and not being the only one dealing with security. Enable this and all users will be asked to enable the feature,</li>
+  <li><strong>Site Name</strong>: when you will add a new profile in the Google Authenticator app, the name you typed here will be used to identify your site,</li>
+  <li><strong>Max Attempts</strong>: if you force your users to enable 2FA, they will only be able to log-in a certain number of times WITHOUT using 2FA. After that, if they still didn't enable the extra security, they won't be allowed to log-in,</li>
+  <li><strong>Authorized Delay</strong>: this last option will allow you to give more time to your users to type the one time password. The TOTP is valid for 30 secs by default, but you can add some extra "validity time".</li>
+</ol>
+
+<h3>Generate your Secret &amp; Setup the Mobile App</h3>
+
+<p>Three steps are required to completely enable the 2FA on your site:</p>
+
+<ol>
+  <li>Go to your profile, scroll to the "<em>WP Google Authenticator Settings"</em> section, and click the "<em>Generate Key"</em> button,</li>
+  <li>The page will reload. Scroll back to the settings section and click "<em>Get QR Code</em>",</li>
+  <li>Flash the QR code with the Google Authenticator app on your mobile</li>
+</ol>
+
+<figure>
+  <img src="{{ site.baseurl }}/assets/img/google-authenticator-180x300.png" alt=""> 
+</figure>
+
+<p>That's it! You WordPress site in now protected with 2-factor authentication.</p>

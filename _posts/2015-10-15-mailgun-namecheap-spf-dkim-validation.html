@@ -1,0 +1,71 @@
+---
+layout: post
+title: 'MailGun and NameCheap: SPF and DKIM Validation'
+date: 2015-10-15 14:14:24.000000000 +07:00
+categories:
+- How To
+tags:
+- dkim
+- email
+- esp
+- mailgun
+- namecheap
+- spf
+---
+<p>When working on client projects, e-mail delivery is a primary concern. Most of my clients (most people in general I assume) use e-mail quite extensively for lead generation on their site.</p>
+
+<p>Making sure e-mails are correctly delivered is crucial. Unfortunately, the basic way e-mails are sent out with website is quite unreliable. The common function used in PHP for instance is <code>mail()</code>. As a WordPress specialist, I very often work with its WordPress wrapper <code>wp_mail()</code>.</p>
+
+<p>What this function does is send the e-mails using the hosting server itself. This is very dangerous, especially when using shared hosting. Poor delivery and blacklisting are the two major risks.</p>
+
+<h2>Email Delivery Services</h2>
+
+<p>I'm not going to list all the reasons why you shouldn't use a hosting server to send out e-mails. I'm just going to say that it is more than recommended to use a dedicated e-mail delivery service. There are plenty available. Mandrill, MailGun, SendGrid, MailJet...</p>
+
+<p>For all the small clients I've been working with, I've always used Mandrill (made by MailChimp). They offered a pretty nice free plan that was more than enough for small businesses. However, they stopped this free plan not long ago.</p>
+
+<p>As I was working on yet another small business's site, I turned towards MailGun. It also is a well made delivery service. However, I encountered one problem when trying to validate the domain (mandatory to start using the service).</p>
+
+<h2>MailGun &amp; NameCheap</h2>
+
+<p>I am a huge fan of <a href="https://www.namecheap.com/?aff=91532" target="_blank">NameCheap</a> for domains management. Their prices are really good, and the support has always been outstanding for me.</p>
+
+<p>Validating your domain on MailGun using NameCheap is not exactly done as described in MailGun documentation. I've been able to figure out how to make this work after a bit of research.</p>
+
+<p>You're asked by MailGun to add an SPF and a DKIM record to your domain hosts. You can Google that around if you don't know what it is. Instead of just copy/pasting the records as MailGun shows them, here is what you wanna do.</p>
+
+<h3>SPF Record</h3>
+
+<p>With NameCheap, the SPF record should <strong>NOT</strong> contain the domain name as the host, but <code>@</code> instead (which is basically a shorthand for your domain name).</p>
+
+<p>The SPF record in NameCheap should look like this (the pattern is <em>host |</em> <em>value |</em> <em>record type</em>):</p>
+
+{% highlight bash %}
+@ | v=spf1 include:mailgun.org ~all | TXT Record
+{% endhighlight %}
+
+<h4>Troubleshooting</h4>
+
+<p>If the SPF won't validate, you can check it with MXToolbox: <a href="http://mxtoolbox.com/SuperTool.aspx?action=mx:YOURDOMAIN.COM&amp;run=toolpage" target="_blank">http://mxtoolbox.com/SuperTool.aspx?action=mx:YOURDOMAIN.COM&amp;run=toolpage</a></p>
+
+<p>If it shows the correct SPF record, then just wait. If not, check your settings again.</p>
+
+<h3>DKIM Record</h3>
+
+<p>Regarding the DKIM record, two things need to be changed.</p>
+
+<p>First of all, the host should NOT contain your domain name. It should simply be <code>pic._domainkey</code>.</p>
+
+<p>Second of all, you want to add the DKIM version at the beginning of the value: <code>v=DKIM1</code>. Your record should look something like that (again: <em>host |</em> <em>value |</em> <em>record type</em>):</p>
+
+{% highlight bash %}
+pic._domainkey | v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBVxKp59mzTBGjleRsxzLg0ESZcDRQSgwwBiUtsllnYNvGZRJbdyfe4rxpoi0+yQvetgrthyA3j2OMpI3IKzo5mFoKBO11wgS5mM8ryjkLCeQtyjtyU02LIDVTfxYY66WOavBvp/PiY+2erWnxqmW0QDB+HNLIaE+JV0dhp85vhxFWQIDAQAB | TXT Record
+{% endhighlight %}
+
+<h4>Troubleshooting</h4>
+
+<p>If the DKIM won't validate, you can check it with MXToolbox: <a href="http://mxtoolbox.com/SuperTool.aspx?action=dkim:YOURDOMAIN.COM:DOMAINKEY&amp;run=toolpage#" target="_blank">http://mxtoolbox.com/SuperTool.aspx?action=dkim:YOURDOMAIN.COM:DOMAINKEY&amp;run=toolpage#</a></p>
+
+<p>When replacing DOMAINKEY, use the part that's before <code>_domainkey</code> and don't include any <code>.</code>.</p>
+
+<p>If it shows the correct DKIM record, then just wait. If not, check your settings again.</p>

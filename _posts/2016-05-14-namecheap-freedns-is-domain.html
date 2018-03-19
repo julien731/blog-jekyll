@@ -1,0 +1,24 @@
+---
+layout: post
+title: NameCheap FreeDNS and .is Domains
+date: 2016-05-14 11:29:14.000000000 +07:00
+categories:
+- How To
+tags:
+- dns
+- domain
+- namecheap
+---
+<p>One more NameCheap-related article. Yeah, I'm a big fan of their services!</p>
+
+<p><strong>TL;DR:</strong> FreeDNS can't manage .is domains.</p>
+
+<p>For some client work, I needed to use <a href="https://www.namecheap.com/domains/freedns.aspx">NameCheap's FreeDNS</a> service to manage a domain name with the .is extension.</p>
+
+<p>After some back and fourth with the domain registrar to try and switch the DNS to FreeDNS, I finally got in touch with NameCheap's support team and started what ended up being a 1-hour conversation on their live chat.</p>
+
+<p>By investigating the issue bits by bits, we came to the conclusion that FreeDNS can't manage .is domain names because it doesn't fit the <a href="https://www.isnic.is/en/domain/req">.is registry requirements</a>.</p>
+
+<p>The part that blocks everything is that FreeDNS's nameservers' <abbr title="Time To Live">TTL</abbr> is set to 1800 seconds while the .is registry requires at least 86400 seconds. The <abbr title="Nameserver">NS</abbr>'s TTL can't be changed, even internally by the NameCheap's team.</p>
+
+<p>So, sadly, a .is domain name can't be managed by NameCheap :(</p>

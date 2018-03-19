@@ -1,0 +1,65 @@
+---
+layout: post
+title: Easy Dismissible Notices in WordPress
+date: 2016-04-02 10:43:36.000000000 +07:00
+categories:
+- Web Development
+- WordPress
+tags:
+- library
+- php
+- work
+---
+<p class="intro">WordPress admin notices are great. They're extremely handy for communicating an important message to the users of your theme or plugin.</p>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/admin-notice-1024x236.png" alt=""> 
+    <figcaption>A WordPress Admin Notice</figcaption>
+</figure>
+
+<p>Admin notices can be used for sharing an information, warning of a problem, etc. WordPress made is very easy to register with the <code>admin_notices</code> hook. There is one <em>extremely</em> important thing though: admin notice dismissal.</p>
+
+<h2>Dismiss an Admin Notice</h2>
+
+<p>Have you ever used a plugin that displays a notice that can't be dismissed? Or a notice that comes back on every page load, whether or not you have dismissed it already? What a pain... Nobody wants that.</p>
+
+<p>In WordPress 4.2, WordPress <a href="https://make.wordpress.org/core/2015/04/23/spinners-and-dismissible-admin-notices-in-4-2/" target="_blank">introduced dismissible admin notices</a>. This is basically a front-end mechanism that hides a notice when you click the close button. But again, refresh the page and the notice is back.</p>
+
+<h3>Persistent Notices Dismissal</h3>
+
+<p>What you want is for a notice to be permanently dismissed once this close button is clicked. This is exactly what <a href="https://github.com/julien731/WP-Dismissible-Notices-Handler" target="_blank">WP Dismissible Notices Handler</a> does.</p>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/WP-Dismissible-Notices-Handler-1024x488.png" alt="WP Dismissible Notices Handler on GitHub"> 
+    <figcaption>WP Dismissible Notices Handler on GitHub</figcaption>
+</figure>
+
+<p>After writing admin notices dismissal functions over and over I realize how dumb I was for not having a re-usable library. So much for <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank"><abbr title="Don't Repeat Yourself">DRY</abbr></a> heh.</p>
+
+<p>So I wrote this one. You can very easily use it in your projects using Composer:</p>
+
+{% highlight php %}
+composer require julien731/wp-dismissible-notices-handler
+{% endhighlight %}
+
+<p>This library does 2 things:</p>
+
+<ol>
+  <li>Register admin notices</li>
+  <li>Handle dismissal</li>
+</ol>
+
+<p>Where this library differs from other libraries you can find is the options. When registering a notice, there are two important things that you can set:</p>
+
+<ul>
+  <li><strong>A user capability</strong>: for the notice to show up only for users with a specific capability. Very handy to show a message for admins only for instance.</li>
+  <li><strong>A scope</strong>: you decide if the notice should be dismissed at the user level (dismissed for the current user but still on for other users) or at the site level (one user dismisses it for everyone else)</li>
+</ul>
+
+<p>How easy is it to use this library? Well, it's just one function call away.</p>
+
+{% highlight php %}
+dnh_register_notice( 'my_notice', 'updated', __( 'This is my notice' ) );
+{% endhighlight %}
+
+<p>That's it. With this one line of code you just registered an admin notice that can be properly dismissed. Find all the available parameters <a href="https://github.com/julien731/WP-Dismissible-Notices-Handler" target="_blank">on the GitHub repository</a>.</p>

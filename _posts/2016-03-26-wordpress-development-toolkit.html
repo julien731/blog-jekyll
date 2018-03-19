@@ -1,0 +1,97 @@
+---
+layout: post
+title: "(My) Perfect WordPress Development Environment"
+date: 2016-03-26 23:41:55.000000000 +07:00
+categories:
+- Web Development
+- WordPress
+tags:
+- tools
+- vagrant
+- virtualization
+- vvv
+---
+<p>I've been developing WordPress stuff for a few years now. During all this time, my development toolkit changed. A lot.</p>
+
+<p>As I learnt new skills, I discovered new tools. This usually resulted in a gain of productivity, improved skills, and realizing better tools were available.</p>
+
+<p>Even though this cycle definitely has a limit, I think I still have some nice things to discover. Docker for instance is something I'd love to have the time to dive into. Capistrano is also something I really want to learn more about.</p>
+
+<p>As of today though, I'm really happy with my development environment. Here is what it looks like...</p>
+
+<h2>Development Environment</h2>
+
+<p>In this post I'm focusing exclusively on the environment and not the development tools per se. That could be a topic for another time...</p>
+
+<p>My current development environment is composed of 4 tools (excluding all the basics like Git): <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a>, <a href="https://github.com/Varying-Vagrant-Vagrants/VVV" target="_blank">Varying Vagrant Vagrants</a> (VVV), <a href="https://github.com/bradp/vv" target="_blank">Variable VVV</a> (VV) and <a href="https://github.com/topdown/VVV-Dashboard" target="_blank">VVV Dashboard</a>.</p>
+<p>This set of tools makes it super easy to setup a production-like dev server, create new site "on the fly" and manage all the resulting mess ;)</p>
+
+<h3>VirtualBox</h3>
+
+<p>Yes I know, the first tool I'm talking about is not in the above list. I'm not going to discuss VirtualBox, I just put it here because a virtualization tool is required to run Vagrant, and VirtualBox is the one I use.</p>
+
+<h3>Vagrant</h3>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/vagrant-1024x488.png" alt=""> 
+    <figcaption>Vagrant</figcaption>
+</figure>
+
+<p>Vagrant is a tool that helps create virtualized development servers quickly. The way it works is: you feed it a configuration (through a config file) and then Vagrant will create a new server with the right box and set it up as instructed in the configuration file.</p>
+
+<p>In my case, the configuration file will be provided by VVV.</p>
+
+<h3>Varying Vagrant Vagrants</h3>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/vvv-1024x488.png" alt=""> 
+    <figcaption>Varying Vagrant Vagrants</figcaption>
+</figure>
+
+<p>VVV is, as stated in their readme.md, <em>"an open source Vagrant configuration focused on WordPress development"</em>. It contains a Vagrant configuration specifically designed for WordPress developers.</p>
+
+<p>Once your Vagrant is up with VVV, you get 3 WordPress instances:</p>
+
+<ul>
+  <li>A fresh WordPress install running the latest stable version</li>
+  <li>A copy of the WordPress repository trunk</li>
+  <li>A copy of the WordPress development repository (containing everything, like unit test etc, handy to contribute and create patches)</li>
+</ul>
+
+<p>With all this you're ready to develop your latest theme or plugin in a production-like environment. <code>WP_DEBUG</code> is turned on by default so that you won't miss a stupid PHP warning.</p>
+
+<h3>Variable VVV</h3>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/variable-vvv-1024x488.png" alt=""> 
+    <figcaption>Variable VVV</figcaption>
+</figure>
+
+<p>It's a lot of "Varyblahblah" isn't it? I mean, without shortening it we would have to say "Variable Varying Vagrant Vagrants".</p>
+
+<p>Until recently, my main issue with using VVV for all my WordPress development work was the time required to setup a new VVV machine. For that reason I ended up using Wamp for small things. I was not too happy about doing it though, because developing with VVV really is better and more reliable.</p>
+
+<p>That was before I discovered VV. What VV really is is a WordPress instance creation wizard. By running VV in your VVV machine (that's a hell lot of "V"s seriously), you can create new sites in about 30 seconds. A bit longer to be completely honest as the script still needs to download WP and setup the new instance. With my internet connection is usually takes around 5 minutes.</p>
+
+<p>The setup assistant is really good. By simply typing <code>vv create</code> in your terminal you'll trigger it and you will be asked a series of questions like the site name, the domain name to use, if you want to enable <code>WP_DEBUG</code>, if you want to enable multisite, etc. Really easy.</p>
+
+<h3>VVV Dashboard</h3>
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/img/vvv-dashboard.png" alt=""> 
+    <figcaption>VVV Dashboard</figcaption>
+</figure>
+
+<p>The last tool on the list is VVV Dashboard. Why is it useful?</p>
+
+<p>After you played with VV for a while and you ended up having quite a few WordPress instances, then you'll forget how to access them all. Believe me. And because VVV's homepage doesn't show the "extra" things, you'll end up having to look through the config to find what domain names you used.</p>
+
+<p>VVV Dashboard makes it dead simple. It replaces the default VVV index and in addition of showing all the basics, it will indeed list all your available instances, give you quick access to your sites and the admins.</p>
+
+<p>It will also show you which site has <code>WP_DEBUG</code> enabled, the latest PHP errors, and some server information. Beautiful.</p>
+
+<h2>How To</h2>
+
+<p>I was planning on writing a brief tutorial on how to setup this development environment, but I realized this post is getting pretty long. Also, all the tools mentioned have pretty straightforward installation guides.</p>
+
+<p>If you guys need extra help for setting all this up, I'll gladly write a tutorial on how to setup (my) perfect WordPress development environment. Just ask for it in the comments.</p>
