@@ -3,7 +3,7 @@ layout: default
 title: Julien Liabeuf
 ---
 
-<div class="home" id="home">
+<main class="home" id="home">
   <ul class="posts noList">
     {% for post in paginator.posts %}
       <li>
@@ -14,12 +14,12 @@ title: Julien Liabeuf
     {% endfor %}
   </ul>
   <!-- Pagination links -->
-  <div class="pagination">
+  <nav class="pagination">
     {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous button__outline">Newer Posts</a> 
     {% endif %}
     {% if paginator.next_page %}
       <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next button__outline">Older Posts</a>
     {% endif %}
-  </div>
-</div>
+  </nav>
+</main>

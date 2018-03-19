@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="post">
+<article class="post">
   {% if page.image %}
     <div class="featuredImage">
         <img src="{{ '/assets/img/' | prepend: site.baseurl | append: page.image }}" alt="" />
@@ -13,7 +13,7 @@ layout: default
   {{ content }}
 
   <!-- POST NAVIGATION -->
-  <div class="postNav clearfix">
+  <nav class="postNav clearfix">
     {% if page.previous.url %} 
       <a class="prev{% if page.previous.image %} image{% endif %}" href="{{ page.previous.url | prepend: site.baseurl }}"><span>&laquo;&nbsp;{{ page.previous.title }}</span>
       {% if page.previous.image %} 
@@ -28,5 +28,5 @@ layout: default
       {% endif %} 
       </a>
     {% endif %} 
-  </div>
-</div>
+    </nav>
+</article>
