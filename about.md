@@ -1,24 +1,13 @@
 ---
 layout: default
-title: About Long Haul
+title: About
 ---
 
 <div class="post">
-	<h1 class="pageTitle">About Long Haul</h1>
-	<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt="">
-	<p class="intro">Long Haul is a minimal, long form <a href="http://jekyllrb.com">Jekyll</a> Theme. It can be used as is or customized to your hearts desire.</p>
-	<p>Long Haul was created in honor of all the hard working touring bicycles that have traversed the globe time and time again. Take it for a spin.</p>
-	<h2>Features</h2>
-	<ul>
-		<li>Built with SASS + GULP + BROWSERSYNC + AUTOPREFIXER</li>
-  		<li>SVG Social Icons from <a href="http://customizr.net/icons/">Customizr</a></li>
-  		<li><a href="http://responsive-nav.com/">Responsive Nav Menu</a></li>
-  		<li><a href="https://github.com/snaptortoise/jekyll-rss-feeds">XML Feed for RSS Readers</a></li>
-  		<li>Contact Form via <a href="http://formspree.io/">Formspree</a></li>
-      <li>5 Post Loop with excerpt on Home Page</li>
-  		<li>Previous / Next Post Navigation</li>
-      <li>Estimated Reading Time for posts</li>
-  		<li><a href="https://github.com/adobe-webplatform/dropcap.js">Drop Cap</a> on posts</li>
-  		<li><a href="http://typecast.com/blog/a-more-modern-scale-for-web-typography">A Better Type Scale</a></li>
-  	</ul>
+	<h1 class="pageTitle">About</h1>
+	<p class="intro">Heya, I’m Julien.</p>
+	<p>During the day, I’m the Head of Product and Business Development at <a href="http://nimbl3.com/" target="_blank">Nimbl3</a>, a web and mobile app development shop in Bangkok. We work with startups, SMEs, and enterprises. Our focus is high-quality, fast time to market, and ownership mentality.</p>
+	<p>When the evening comes, I develop <a href="https://profiles.wordpress.org/julien731/" target="_blank">WordPress stuff</a>.</p>
+	<p>Some of my biggest achievements include running a web agency for 7 years&nbsp;and building <a href="https://getawesomesupport.com/" target="_blank">Awesome Support</a>, a support plugin for WordPress (sold in 2016).</p>
+	<p>If yo want to learn more (really?) you can <a href="https://resume.julienliabeuf.com/">check out my online resume</a>.</p>
 </div>
