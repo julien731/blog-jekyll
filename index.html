@@ -23,3 +23,24 @@ title: Julien Liabeuf
     {% endif %}
   </nav>
 </div>
+
+ <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+   "@type": "Blog",
+   "url": "{{ site.url }}",
+   "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}"
+    },
+   "author": {
+      "@type": "Person",
+      "name": "Julien Liabeuf",
+      "sameAs": [
+          "https://twitter.com/{{ site.social.twitter }}",
+          "https://github.com/{{ site.social.github }}",
+          "https://plus.google.com/u/0/{{ site.social.googleplus }}"
+      ]
+    }
+  }
+  </script>
