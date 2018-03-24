@@ -7,6 +7,12 @@ baseurl: ""
 paginate_path: "blog/page/:num/"
 permalink: :title/
 
+repository: julien731/blog-jekyll
+
+# Staticman comments (full configuration in staticman.yml)
+staticman:
+  branch                 : "master"
+
 markdown: kramdown
 highlighter: rouge
 gems: [jekyll-paginate]
