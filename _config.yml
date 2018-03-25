@@ -26,6 +26,9 @@ navigation:
  - title: Contact
    url: /contact
 
+author:
+  name: Julien Liabeuf
+
 social:
    github: julien731
    twitter: julien731
