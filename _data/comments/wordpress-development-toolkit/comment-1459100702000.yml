@@ -1,0 +1,15 @@
+name: Geoff Denslow
+date: '2016-03-28 00:45:02'
+url: 'http://coder.net.au'
+message: >-
+  Hi Julien. I'm still using MAMP, as the last time I looked at all the V's
+  there were just three of them (no VVVV or Dashboard) so setting up new sites
+  and monitoring/remembering them was a pain - I probably create three new
+  Wordpress projects a week on average so the overhead of virtualising wasn't
+  worth it. Reading this I may have to take another look so thanks for taking
+  the time to write the article. One thing I'm worried about is the size of the
+  virtual instances. At the moment I just have a single MAMP directory housing
+  individual Wordpress installations for each project - what's the rough size of
+  a new VVV image? And can they be easily backed up/restored by just moving
+  them? Appreciate your time!
+email: 5c35d049c5e906907f8181785ca166df

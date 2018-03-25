@@ -1,0 +1,5 @@
+name: Kyle
+date: '2016-03-27 09:14:55'
+url: ''
+message: "I used to use AMPPS, then I moved to using MAMP because it sets up virtual hosts for me in just seconds. I also use Alfred to run a custom bash script that uses WP-CLI to install WordPresss, as the MAMP installer is a bit buggy.\r\n\r\nI also use no-ip.com to map a real domain to  my local server, that way designers can easily view development at any stage of the project as needed. For me this is a huge time saver. I'm not a big fan of developing with project.dev style url's.\r\n\r\nI'd like to eventually move to VVV and use DNSMASQ but I'll have to find the time since I'm not the most experience person at setting up that sort of thing. \r\n\r\nI think I'll probably wait till I get a new iMac and can afford to practice on my MacBook and not worry if I mess anything up."
+email: 4c078d49e3b210751a2dca3b341427a2

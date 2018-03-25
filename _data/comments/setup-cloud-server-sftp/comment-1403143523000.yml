@@ -1,0 +1,6 @@
+replying_to: "1"
+name: Julien
+date: '2014-06-19 09:05:23'
+url: ''
+message: "Thanks Esa.\r\n\r\nUnfortunately I haven't been using importbuddy.php. With the error you get, I would first check the CHMOD for <code>/var/www/funnl/</code> (try 777), and alternatively set the permissions specifically for this directory (step \"Set the Permissons\")."
+email: b1df59c5ec0a0c3abc38855c890ddbcb

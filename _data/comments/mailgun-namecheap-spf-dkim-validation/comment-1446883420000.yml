@@ -1,0 +1,6 @@
+replying_to: "1"
+name: Julien
+date: '2015-11-07 15:03:40'
+url: ''
+message: "Happy it helped someone Kim!\r\n\r\nI was already familiar with the domainkey format with NameCheap so I just did that instead of following MailGun’s docs.\r\n\r\nFor the rest, I’ve been reading around how DKIM works and finally found a working configuration ?\r\n\r\nUnfortunately MailGun’s support hasn’t been very helpful in this situation, that’s why I thought it’d be good to share the solution."
+email: b1df59c5ec0a0c3abc38855c890ddbcb

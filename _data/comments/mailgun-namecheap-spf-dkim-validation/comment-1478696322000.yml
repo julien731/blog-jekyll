@@ -1,0 +1,5 @@
+name: Andres
+date: '2016-11-09 19:58:42'
+url: ''
+message: "Thanks a lot Julien, wouldn't have solve this without your blog and Dan's reply on subdomains. \r\nIn case it help to clarify the info in the blog to beginners like me I'll share what I used for my setup with subdomain 'mail' (Same as Dan's):\r\n\r\nFor the DKIM:\r\nHOST:   xx._domainkey.mail VALUE: Included v=DKIM1; as suggested above\r\n(where 'xx' are the two letters appearing before '._domainkey' in the Host section of the DKIM record provided by Mailgun.   \r\n\r\nFor SPF:\r\nHOST: mail\r\n\r\nThe site recommended above validated the SPF record instantly although it took some time for Mailgun to recognise the change. On the contrary, I couldn't validate the DKIM through the site whilst eventually was approved by mailgun. \r\n\r\nThanks again Julien!"
+email: ad043e4640d9d1bdfe8a10e5f86d1c5c

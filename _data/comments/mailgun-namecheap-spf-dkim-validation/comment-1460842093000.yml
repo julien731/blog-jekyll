@@ -1,0 +1,5 @@
+name: Isaac
+date: '2016-04-17 04:28:13'
+url: ''
+message: "My domain validated easily following MailGun's instructions, but I get an error (\"Mailgun HTTP API Test Failure\") when using the \"Test Configuration\" button in Wordpress. I get similar results when using SMTP with and without authentication.\r\n\r\nHave you experienced anything like this, if so what was your fix?"
+email: dd10cd1ca20ff55e2d0e31946375080c

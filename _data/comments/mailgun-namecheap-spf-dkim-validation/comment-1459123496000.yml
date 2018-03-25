@@ -1,0 +1,6 @@
+replying_to: "1"
+name: Robert
+date: '2016-03-28 07:04:56'
+url: ''
+message: "Julien,\r\n\r\nGreat tutorial, I have almost everything passing when making the correction with the DKIM record. \r\n\r\nNow the issue is that the DKIM will not pass validation. Any  ideas?"
+email: c272610d51751e981b680202c68ff82c

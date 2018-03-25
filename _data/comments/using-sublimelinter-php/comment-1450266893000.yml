@@ -1,0 +1,23 @@
+name: Julien Liabeuf
+date: '2015-12-16 18:54:53'
+url: ''
+message: >-
+  I think the problem is that you have settings outside the brackets, which may
+  be the source of your "Error trying to parse settings" error. Try placing all
+  your settings inside the brackets like so:
+
+
+  <pre>
+
+  {
+    “sublimelinter”: true,
+    “sublimelinter_executable_map”:
+    {
+      “php”:”C:\\wamp\\php\\php.exe”
+     },
+    “warning_color”: “DDB700”,
+    “wrap_find”: true
+  }
+
+  </pre>
+email: b1df59c5ec0a0c3abc38855c890ddbcb

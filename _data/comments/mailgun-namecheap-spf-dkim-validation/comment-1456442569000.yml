@@ -1,0 +1,6 @@
+replying_to: "3"
+name: Dan Seals
+date: '2016-02-26 06:22:49'
+url: 'http://danseals.me'
+message: "I can give additional info. I just set this up with a subdomain. And your website helped, there are no errors, and it's very annoying.\r\n\r\nIf you use a subdomain: mg.example.com or email.mg.example.com the following happens:\r\n\r\nI used \"mg\" as the host value of the SPF record. Not @ symbol.\r\n\r\nFor the other I used \"mailo._domainkey.mg\" I did have to add the DKIM as suggested here.\r\n\r\nHope that helps others with their setup!!"
+email: a4b2b3f99b53f4fb31ad8a48464fed1d

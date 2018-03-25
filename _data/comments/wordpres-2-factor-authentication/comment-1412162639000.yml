@@ -1,0 +1,6 @@
+replying_to: "7"
+name: Julien Liabeuf
+date: '2014-10-01 18:23:59'
+url: ''
+message: "Hi Bob,\r\n\r\nNo worries, the plugin can work on sites anywhere in the world. The time I'm talking about it the \"base\" time. Every computer is set to a UTC time, and then it is altered depending on your timezone. What's important is the UTC time which should be about the same on every computer / server.\r\n\r\nRegarding the activation, you can only force <strong>all</strong> users to use the 2-steps authentication. You can't set it on a user basis."
+email: b1df59c5ec0a0c3abc38855c890ddbcb

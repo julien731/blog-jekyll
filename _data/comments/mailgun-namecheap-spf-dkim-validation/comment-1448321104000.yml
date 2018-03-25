@@ -1,0 +1,7 @@
+name: Mike
+date: '2015-11-24 06:25:04'
+url: ''
+message: >-
+  Thanks for sharing.  Question on the SPF record.  If my mailgun domain uses a
+  subdomain like mg.example.com, do I still use @ as the host in my SPF record?
+email: 9be2b79fab17d3b09aeeebf8ea0826b9

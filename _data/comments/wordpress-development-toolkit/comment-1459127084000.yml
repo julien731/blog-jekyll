@@ -1,0 +1,20 @@
+replying_to: "3"
+name: Julien Liabeuf
+date: '2016-03-28 08:04:44'
+url: ''
+message: >-
+  Indeed VV + VVV Dashboard changes the game. Regarding the storage space, the
+  development directory isn't that big at all. It really depends on how many WP
+  sites you have and the size of themes/plugins.
+
+
+  The virtual machine takes more space, but the beauty of using VV is that you
+  run everything on one VM only. My VM is about 1.5Gb while my dev directory is
+  about 50Mo at the moment.
+
+
+  Regarding backups, the only thing you need is your dev directory as the VM can
+  be re-created anytime. The one thing you wanna backup in case of computer
+  reset or whatever is your DB:
+  [https://github.com/Varying-Vagrant-Vagrants/VVV/tree/develop/database/backups](https://github.com/Varying-Vagrant-Vagrants/VVV/tree/develop/database/backups)
+email: b1df59c5ec0a0c3abc38855c890ddbcb

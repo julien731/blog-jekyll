@@ -1,0 +1,6 @@
+replying_to: "16"
+name: Julien Liabeuf
+date: '2016-05-17 23:48:54'
+url: ''
+message: "Are you trying to check your record with MXToolbox? If so, the URL to use should be something like http://mxtoolbox.com/SuperTool.aspx?action=dkim:streamhunt.io:DOMAINKEY&run=toolpage# where <code>DOMAINKEY</code> is the string that Mailgun gave you (eg. <code>pic</code> if Mailgun gave you <code>pic._domainkey</code>).\r\n\r\nIf you're talking about the host record through, the host should simply be <code>xxx._domainkey</code>."
+email: b1df59c5ec0a0c3abc38855c890ddbcb

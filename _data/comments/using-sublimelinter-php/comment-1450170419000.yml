@@ -1,0 +1,5 @@
+name: Clement
+date: '2015-12-15 16:06:59'
+url: ''
+message: "This doesn't work too.\r\n\r\n\r\n\"warning_color\": \"DDB700\",\r\n        \"wrap_find\": true\r\n        {\r\n         \"sublimelinter\": true,\r\n        \"sublimelinter_executable_map\":\r\n         { \"php\":\"C:\\\\wamp\\\\php\\\\php.exe\" } \r\n        }\r\n\r\n\r\n\r\nI get an error message saying: \"Error trying to parse settings: Unexpected character, expected a comma or closing bracket in Packages\\User\\Sublime.sublime-settings:49:9\""
+email: 135f6fc782c54e15fa8f9263a99ac7a7

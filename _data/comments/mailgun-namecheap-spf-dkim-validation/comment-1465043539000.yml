@@ -1,0 +1,5 @@
+name: Josh
+date: '2016-06-04 19:32:19'
+url: ''
+message: "Thanks for this really helpful info! \r\n\r\nIs there also something we need to do differently with the CNAME record that Mailgun suggests we add to DNS settings? This is what they suggest:\r\n\r\nType: CNAME \r\nHost: email.******.com \r\nValue: mailgun.org\r\n\r\nHowever Mailgun isn't picking up any DNS settings after I add the above to Namecheap DNS. Mxtoolbox seems to recognize the changes just fine."
+email: 8f95e1147bc7abf3ae42c83962552d0e

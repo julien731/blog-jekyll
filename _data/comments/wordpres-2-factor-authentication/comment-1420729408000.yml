@@ -1,0 +1,6 @@
+replying_to: "11"
+name: Julien Liabeuf
+date: '2015-01-08 22:03:28'
+url: ''
+message: "What app are you using on your iPhone to scan the QR code? Google Authenticator? Authy?\r\n\r\nYour site doesn't need to be online. The plugin should work even if the site is on a local development environment. An access to internet is required though in order to get the QR code (using the Google API), but if you do see the QR then it shouldn't be a problem."
+email: b1df59c5ec0a0c3abc38855c890ddbcb
