@@ -4,7 +4,7 @@
 		<img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=50" alt="{{ include.name | strip_html }}" class="comment-author-avatar">
 		<div class="comment-author-name">
 			{% unless include.url == blank %}
-				<a rel="external nofollow" href="{{ include.url }}">{{ include.name | strip_html }}</a>
+				<a rel="external nofollow" href="{{ include.url }}" target="_blank">{{ include.name | strip_html }}</a>
 			{% else %}
 				{{ include.name | strip_html | capitalize }}
 			{% endunless %}
