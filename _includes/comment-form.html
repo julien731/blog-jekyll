@@ -10,11 +10,6 @@
 	<form id="comment-form" method="post" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
 
 		<div class="form-group">
-			<label class="sr-only" for="comment-form-message"><strong>Comment</strong> <small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
-			<textarea type="text" rows="6" id="comment-form-message" name="fields[message]" required spellcheck="true" placeholder="Comment (Markdown is allowed)" class="full-width"></textarea>
-		</div>
-
-		<div class="form-group">
 			<label class="sr-only" for="comment-form-name"><strong>Name</strong></label>
 			<input type="text" id="comment-form-name" name="fields[name]" required spellcheck="false" placeholder="Name" class="full-width">
 		</div>
@@ -27,6 +22,11 @@
 		<div class="form-group">
 			<label class="sr-only" for="comment-form-url"><strong>Website</strong> <small>(optional)</small></label>
 			<input type="url" id="comment-form-url" name="fields[url]" placeholder="Website (optional)" class="full-width">
+		</div>
+
+		<div class="form-group">
+			<label class="sr-only" for="comment-form-message"><strong>Comment</strong> <small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
+			<textarea type="text" rows="6" id="comment-form-message" name="fields[message]" required spellcheck="true" placeholder="Comment (Markdown is allowed)" class="full-width"></textarea>
 		</div>
 
 		<div class="form-group hidden" style="display: none;">
