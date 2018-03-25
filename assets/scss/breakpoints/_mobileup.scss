@@ -67,6 +67,10 @@ img,video,audio,iframe,object{
     width: 75%;
     margin: 0 auto 20px auto;
 
+    .comment-author-name {
+      text-transform: capitalize;
+    }
+
     .comment-timestamp {
       font-size: .7em;
       color: $silver;

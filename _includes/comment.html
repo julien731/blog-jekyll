@@ -4,7 +4,7 @@
 		<img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=50" alt="{{ include.name | strip_html }}" class="comment-author-avatar">
 		<div class="comment-author-name">
 			{% unless include.url == blank %}
-				<a rel="external nofollow" href="{{ include.url }}">{{ include.name | strip_html | capitalize }}</a>
+				<a rel="external nofollow" href="{{ include.url }}">{{ include.name | strip_html }}</a>
 			{% else %}
 				{{ include.name | strip_html | capitalize }}
 			{% endunless %}
@@ -24,7 +24,7 @@
 
 	{% unless include.replying_to != 0 or page.comments_locked == true %}
 		<div class="comment-reply">
-			<a rel="nofollow" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')">Reply to {{ include.name }}</a>
+			<a rel="nofollow" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')">Reply to {{ include.name | strip_html }}</a>
 		</div>
 	{% endunless %}
 </article>
