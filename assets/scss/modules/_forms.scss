@@ -16,6 +16,7 @@ input[type=text], input[type=email], input[type=url], input[type=phone], input[t
   width: 300px;
   margin-bottom: .5rem;
   font-size: .9em;
+  font-family: $sans-serif;
 
   &:focus {
     border: 1px solid $primary-color;
