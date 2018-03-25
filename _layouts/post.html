@@ -8,7 +8,7 @@ layout: default
       </div>
   {% endif %}
   <h1 class="postTitle">{{ page.title }}</h1>
-  <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read</p>
+  <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read | <span class="post-comments-count"><a href="{% if site.data.comments[page.slug].size > 1 %}#comments{% else %}#respond{% endif %}">{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' Comments' }}{% else %}No Comments{% endif %}</a></span></p>
   
   {{ content }}
 
@@ -32,7 +32,7 @@ layout: default
 
     {% include structured_data_post.html %}
 
-  {% if page.comments == true %}
+  {% if page.comments != false %}
     {% include comments.html %}
   {% endif %}
 
