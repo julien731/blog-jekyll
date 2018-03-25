@@ -32,4 +32,8 @@ layout: default
 
     {% include structured_data_post.html %}
 
+  {% if page.comments == true %}
+    {% include comments.html %}
+  {% endif %}
+
 </article>
