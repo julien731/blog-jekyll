@@ -27,6 +27,8 @@
 			<a rel="nofollow" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')">Reply to this comment</a>
 		</div>
 	{% endunless %}
+
+	{% include structured_data_comment.html %}
 </article>
 
 {% capture i %}{{ include.index }}{% endcapture %}

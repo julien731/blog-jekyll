@@ -1,0 +1,14 @@
+<script type="application/ld+json">
+{
+   "@context":"http://schema.org",
+   "@type":"Comment",
+   "author":{
+      "@type":"Person",
+      "name":"{{ include.name }}",
+      "url":"{{ include.url }}"
+   },
+   "datePublished":"{{ include.date | date_to_xmlschema }}",
+   "discussionUrl":"{{ site.url }}#comment{% if r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}",
+   "text":"{{ include.message }}"
+}
+</script>
