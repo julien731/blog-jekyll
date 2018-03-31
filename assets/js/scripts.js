@@ -22,7 +22,7 @@ $(document).ready(function () {
                 $("#form-submit-button").attr("disabled", true).attr('value', 'Sending...');
             },
             success: function (data) {
-                $contactForm.append('<div class="alert alert-success">Message sent!</div>');
+                $contactForm.append('<div class="alert alert-success"><strong>Thanks for your message!</strong> I will get back to you as soon as I can.</div>');
                 $("#form-submit-button").attr("disabled", true).attr('value', 'Sent!');
             },
             error: function (err) {
