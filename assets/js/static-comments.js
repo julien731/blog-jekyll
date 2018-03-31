@@ -23,7 +23,7 @@
                     .removeClass("alert-danger")
                     .addClass("alert-success");
                 showAlert(
-                    '<strong>Thanks for your comment!</strong> It is <a href="https://github.com/mmistakes/made-mistakes-jekyll/pulls">currently pending</a> and will show on the site once approved.'
+                    '<strong>Thanks for your comment!</strong> It is <a href="https://github.com/julien731/blog-jekyll/pulls">currently pending</a> and will show on the site once approved.'
                 );
             },
             error: function (err) {
