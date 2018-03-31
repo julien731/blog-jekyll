@@ -20,8 +20,8 @@
                     .html("Submitted")
                     .addClass("btn--disabled");
                 $("#comment-form .js-notice")
-                    .removeClass("notice--danger")
-                    .addClass("notice--success");
+                    .removeClass("alert-danger")
+                    .addClass("alert-success");
                 showAlert(
                     '<strong>Thanks for your comment!</strong> It is <a href="https://github.com/mmistakes/made-mistakes-jekyll/pulls">currently pending</a> and will show on the site once approved.'
                 );
@@ -30,8 +30,8 @@
                 console.log(err);
                 $("#comment-form-submit").html("Submit Comment");
                 $("#comment-form .js-notice")
-                    .removeClass("notice--success")
-                    .addClass("notice--danger");
+                    .removeClass("alert-success")
+                    .addClass("alert-danger");
                 showAlert(
                     "<strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
                 );
