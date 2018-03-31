@@ -28,7 +28,7 @@ $(document).ready(function () {
             error: function (err) {
                 $contactForm.removeClass("disabled");
                 $("#form-submit-button").attr("disabled", false).attr('value', 'Send');
-                $contactForm.append('<div class="alert alert-error"><strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again.</div>');
+                $contactForm.append('<div class="alert alert-danger"><strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again.</div>');
             }
         });
     });
