@@ -70,15 +70,15 @@ comments:
     # Enable notifications
     enabled: true
 
-      # (!) ENCRYPTED
-      #
-      # Mailgun API key
-      apiKey: "HlM5RqxGuznHwcj6WqDDDD2xikmnbYvLwiqi586ECQAHaK1SlR8/5NAfJHaEoWndAA3GwK5Z4wcDwSxZK+3Uol8rhC9f354KrWAdaJJDMWQegJcaeArp5hw9B2MkXgWl4tbF4SU5VmT3i57mFtJoe5wVWO23IaBhfJMFKmF7cEg="
+    # (!) ENCRYPTED
+    #
+    # Mailgun API key
+    apiKey: "HlM5RqxGuznHwcj6WqDDDD2xikmnbYvLwiqi586ECQAHaK1SlR8/5NAfJHaEoWndAA3GwK5Z4wcDwSxZK+3Uol8rhC9f354KrWAdaJJDMWQegJcaeArp5hw9B2MkXgWl4tbF4SU5VmT3i57mFtJoe5wVWO23IaBhfJMFKmF7cEg="
 
-      # (!) ENCRYPTED
-      #
-      # Mailgun domain (encrypted)
-      domain: "p69HhWndIpt5DjvcH9K4GKAe3JKNX+LOQlz7f5UQHJAE0E3l3fP1YEqMiJCgABQRaNcRs2FtDBI6ql/LN2SWzvO4rXqWRr5RvzVN4McUP9UVFKZKDfo5w2gjcEKnTnQpPtbg7EhY0ZqdMfreuUplaBrL/nw0TCCMVIaRryTBkgo="
+    # (!) ENCRYPTED
+    #
+    # Mailgun domain (encrypted)
+    domain: "p69HhWndIpt5DjvcH9K4GKAe3JKNX+LOQlz7f5UQHJAE0E3l3fP1YEqMiJCgABQRaNcRs2FtDBI6ql/LN2SWzvO4rXqWRr5RvzVN4McUP9UVFKZKDfo5w2gjcEKnTnQpPtbg7EhY0ZqdMfreuUplaBrL/nw0TCCMVIaRryTBkgo="
 
   # (*) REQUIRED
   #
