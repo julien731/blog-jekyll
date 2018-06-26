@@ -2,6 +2,9 @@
 layout: post
 title: The True Cost of In-House Development
 date: 2018-06-26 20:02:08.000000000 +07:00
+permalink: /true-cost-of-in-house-development
+comments: true
+comments_locked: false
 categories:
 - Development
 ---
