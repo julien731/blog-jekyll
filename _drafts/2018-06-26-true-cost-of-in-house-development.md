@@ -4,14 +4,6 @@ title: The True Cost of In-House Development
 date: 2018-06-26 20:02:08.000000000 +07:00
 categories:
 - Development
-tags:
-- 2-factor
-- 2FA
-- authentication
-- google
-- google authenticator
-- security
-- work
 ---
 
 > &laquo;It would cost me half as much to develop my application if I hired a developer myself than working with you guys.&raquo;
