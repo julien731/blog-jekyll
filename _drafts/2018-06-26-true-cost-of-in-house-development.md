@@ -14,7 +14,7 @@ tags:
 - work
 ---
 
-> It would cost me half as much to develop my application if I hired a developer myself than working with you guys.
+> &laquo;It would cost me half as much to develop my application if I hired a developer myself than working with you guys.&raquo;
 
 Yep, that's true.
 
