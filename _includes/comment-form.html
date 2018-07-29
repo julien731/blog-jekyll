@@ -35,6 +35,19 @@
 			<input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
 			<input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
 			<input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
+			<input type="hidden" name="options[reCaptcha][siteKey]" value="6Lcl_WYUAAAAABOmMBvZ8IV24VpQRPwVPx89FiOp">
+			<input type="hidden" name="options[reCaptcha][secret]" value="Ph1ZcUu2A/F8ZasP86TE8J6ORO4NPQ1yCRmo5QiLDtP7OA/6aCQozNOrjZx+FZ6EhVGttmueTaK6BH7hmqBqWhTLC1pbMqcuoTOGFpOXTb8x1FGudRamJ3V++IX23Hx3l4vk9LqU34l3YSrZ5iEDCbjzgC2F4aZ0L8iMfpNC+Bo=">
+		</div>
+
+
+
+		<div class="form-group">
+			<div class="g-recaptcha" data-sitekey="6Lcl_WYUAAAAABOmMBvZ8IV24VpQRPwVPx89FiOp"></div>
+			<label class="comment-reply-notifications" for="comment-form-reply">
+				<input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email" tabindex="5">
+				Notify me of replies by email.
+			</label>
+			<button type="submit" id="comment-form-submit" class="button" tabindex="6">Send Comment</button>
 		</div>
 
 		<!-- Start comment form alert messaging -->
@@ -42,14 +55,6 @@
 			<span class="js-notice-text"></span>
 		</div>
 		<!-- End comment form alert messaging -->
-
-		<div class="form-group">
-			<label class="comment-reply-notifications" for="comment-form-reply">
-				<input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email" tabindex="5">
-				Notify me of replies by email.
-			</label>
-			<button type="submit" id="comment-form-submit" class="button" tabindex="6">Send Comment</button>
-		</div>
 
 	</form>
 </div>
