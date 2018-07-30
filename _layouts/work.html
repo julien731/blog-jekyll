@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: default
 ---
 <article class="post">
 	{% if page.image %}
@@ -8,7 +8,7 @@ layout: work
 	</div>
 	{% endif %}
 	<h1 class="postTitle">{{ page.title }}</h1>
-	<p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read | <span class="post-comments-count"><a href="{% if site.data.comments[page.slug].size > 1 %}#comments{% else %}#respond{% endif %}">{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' Comments' }}{% else %}No Comments{% endif %}</a></span></p>
+	<p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read</p>
 
 	{{ content }}
 
@@ -30,10 +30,6 @@ layout: work
 		{% endif %}
 	</nav>
 
-	{% include structured_data_post.html %}
-
-	{% if page.comments != false %}
-	{% include comments.html %}
-	{% endif %}
+	{% include structured_data_page.html %}
 
 </article>
