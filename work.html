@@ -1,0 +1,48 @@
+---
+layout: default
+title: Julien Liabeuf
+---
+
+<div class="home" id="home">
+	<ul class="posts noList">
+		{% for work in site.work %}
+		<li>
+			<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+			<h3><a class="post-link" href="{{ work.url | prepend: site.baseurl }}">{{ work.title }}</a></h3>
+			<p>{{ work.excerpt | default: work.description | strip_html | normalize_whitespace | escape }}</p>
+		</li>
+
+		{% endfor %}
+	</ul>
+	<!-- Pagination links -->
+	<nav class="pagination">
+		{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous button__outline">Newer Posts</a>
+		{% endif %}
+		{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next button__outline">Older Posts</a>
+		{% endif %}
+	</nav>
+</div>
+
+<script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+   "@type": "Blog",
+   "url": "{{ site.url }}",
+   "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}"
+    },
+   "author": {
+      "@type": "Person",
+      "name": "Julien Liabeuf",
+      "sameAs": [
+          "https://twitter.com/{{ site.social.twitter }}",
+          "https://github.com/{{ site.social.github }}",
+          "https://plus.google.com/u/0/{{ site.social.googleplus }}"
+      ]
+    }
+  }
+
+</script>
