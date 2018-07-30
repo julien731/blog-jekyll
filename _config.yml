@@ -13,6 +13,11 @@ repository:        julien731/blog-jekyll
 staticman:
   branch:          "master"
 
+collections:
+  work:
+    output:        true
+    permalink:     /:collection/:name
+
 markdown:          kramdown
 highlighter:       rouge
 gems:              [jekyll-paginate]
