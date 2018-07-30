@@ -6,7 +6,7 @@ permalink: /work/n2clic
 description: N2Clic Ltd. was a web agency based in Hong Kong. Our services included UI/UX design, WordPress development, mobile expertise, branding and consulting. We've been working with companies all around the world
 ---
 
-N2Clic Ltd. was a web agency based in Hong Kong. Our services included UI/UX design, WordPress development, mobile expertise, branding and consulting. We've been working with companies all around the world.
+<p class="intro">N2Clic Ltd. was a web agency based in Hong Kong. Our services included UI/UX design, WordPress development, mobile expertise, branding and consulting. We've been working with companies all around the world.</p>
 
 ## TL;DR
 
