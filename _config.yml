@@ -1,38 +1,38 @@
-title: Julien Liabeuf
-description: I am a Bangkok-based Business Developer and Product Manager. On this blog, I share my thoughts on business and IT."
-tagline: Product Manager, Business Developer
+title:             Julien Liabeuf
+description:       I am a Bangkok-based Business Developer and Product Manager. On this blog, I share my thoughts on business and IT."
+tagline:           Product Manager, Business Developer
 
-url: https://julienliabeuf.com
-baseurl: ""
-paginate_path: "blog/page/:num/"
-permalink: :title/
+url:               https://julienliabeuf.com
+baseurl:           ""
+paginate_path:     "blog/page/:num/"
+permalink:         :title/
 
-repository: julien731/blog-jekyll
+repository:        julien731/blog-jekyll
 
 # Staticman comments (full configuration in staticman.yml)
 staticman:
-  branch                 : "master"
+  branch:          "master"
 
-markdown: kramdown
-highlighter: rouge
-gems: [jekyll-paginate]
-paginate: 5
+markdown:          kramdown
+highlighter:       rouge
+gems:              [jekyll-paginate]
+paginate:          5
 
 navigation:
- - title: Home
-   url: /
- - title: About
-   url: /about
- - title: Contact
-   url: /contact
+ - title:          Home
+   url:            /
+ - title:          About
+   url:            /about
+ - title:          Contact
+   url:            /contact
 
 author:
-  name: Julien Liabeuf
+  name:            Julien Liabeuf
 
 social:
-   github: julien731
-   twitter: julien731
-   email: julien@liabeuf.fr
-   googleplus: +JulienLiabeuf
+   github:         julien731
+   twitter:        julien731
+   email:          julien@liabeuf.fr
+   googleplus:     +JulienLiabeuf
 
-google_analytics: "UA-22409901-4"
+google_analytics:  "UA-22409901-4"
