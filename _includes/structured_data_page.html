@@ -1,0 +1,35 @@
+<script type="application/ld+json">
+	{
+	"@context":"http://schema.org",
+	"@type":"WebPage",
+	"headline":"{{ page.title }}",
+	"wordCount":"{{ page.content | number_of_words }}",
+	"url":"{{ page.url | prepend: site.url }}",
+	"datePublished":"{{ page.date | | date: '%Y-%m-%d' }}",
+	"dateModified":"{{ page.dateModified | default: page.date | date: '%Y-%m-%d' }}",
+	"image":"{{ page.image | default: 'notebook.jpg' | prepend: '/assets/img/' | prepend: site.url }}",
+	"author":{
+		"@type":"Person",
+			"name":"Julien Liabeuf",
+			"sameAs":[
+				"https://twitter.com/{{ site.social.twitter }}",
+				"https://github.com/{{ site.social.github }}",
+				"https://plus.google.com/u/0/{{ site.social.googleplus }}"
+			]
+	},
+	"publisher":{
+		"@type":"Person",
+		"name":"Julien Liabeuf",
+		"sameAs":[
+			"https://twitter.com/{{ site.social.twitter }}",
+			"https://github.com/{{ site.social.github }}",
+			"https://plus.google.com/u/0/{{ site.social.googleplus }}"
+		]
+	},
+	"mainEntityOfPage":{
+		"@type":"WebPage",
+		"@id":"{{ page.url | prepend: site.url }}"
+	},
+	"articleBody":"{{ page.content | strip_html | xml_escape | normalize_whitepace | strip_newlines | strip }}"
+	}
+</script>
