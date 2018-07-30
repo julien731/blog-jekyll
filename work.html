@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Julien Liabeuf
+title: Work and Experiences
 ---
 
 <div class="home" id="home">
 	<ul class="posts noList">
 		{% for work in site.work reversed %}
 		<li>
-			<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+			<span class="date">{{ work.date | date: '%B %d, %Y' }}</span>
 			<h3><a class="post-link" href="{{ work.url | prepend: site.baseurl }}">{{ work.title }}</a></h3>
 			<p>{{ work.excerpt | default: work.description | strip_html | normalize_whitespace | escape }}</p>
 		</li>
