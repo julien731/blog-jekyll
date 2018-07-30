@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contact Long Haul
+title: Contact Julien
 ---
 
 <div id="contact">
@@ -9,7 +9,7 @@ title: Contact Long Haul
     <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible.</p>
     <p>If you need code review or consulting services, please note that I charge $100 US per hour with a minimum of 1 hour.</p>
   </div>
-  <form action="http://formspree.io/{{ site.social.email }}" method="post" id="contact-form">
+  <form action="https://formspree.io/{{ site.social.email }}" method="post" id="contact-form">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" class="full-width"><br>
     <label for="email">Email Address</label>
