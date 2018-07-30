@@ -18,6 +18,13 @@ collections:
     output:        true
     permalink:     /:collection/:name
 
+defaults:
+- scope:
+    path:          ""
+    type:          work
+  values:
+    layout:        work
+
 markdown:          kramdown
 highlighter:       rouge
 gems:              [jekyll-paginate]
