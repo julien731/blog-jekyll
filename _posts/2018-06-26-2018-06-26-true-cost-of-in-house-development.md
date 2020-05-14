@@ -23,7 +23,7 @@ While it's true that having your in-house developer(s) is cheaper, on paper, tha
 
 Before going any further, I need to tell you whom I'm talking about, and where I see the problem from.
 
-Even though my point should remain valid for almost any scenario, the specific situation I'm in is being a Product Manager for a [software development consultancy](https://nimbl3.com), and I'm getting this question from potential customers.
+Even though my point should remain valid for almost any scenario, the specific situation I'm in is being a Product Manager for a [software development consultancy](https://nimblehq.co), and I'm getting this question from potential customers.
 
 This answer targets entrepreneurs who are starting a new product or are early-stage in their venture.
 
