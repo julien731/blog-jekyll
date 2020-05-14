@@ -61,7 +61,7 @@ When you think that by hiring a developer you are getting more features done fas
 
 When working with a software development shop, you immediately cut down on time spent on things that are not directly valuable to your product.
 
-Any software development shop will thoroughly evaluate developers before hiring them and will train them after hiring. Just like that, by working with a company like [Nimble](https://nimbl3.com) (the company where I work), you leverage professional training on top of the developer's skills and experience.
+Any software development shop will thoroughly evaluate developers before hiring them and will train them after hiring. Just like that, by working with a company like [Nimble](https://nimblehq.co) (the company where I work), you leverage professional training on top of the developer's skills and experience.
 
 For all of the other points listed above, each developer relies on the team knowledge and experience.
 
