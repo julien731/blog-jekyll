@@ -1,7 +1,7 @@
 ---
 layout: post
 title: From Pivotal Tracker to Clubhouse
-date: 2018-06-26 20:02:08.000000000 +07:00
+date: 2020-07-14 16:02:08.000000000 +07:00
 permalink: /pivotal-tracker-to-clubhouse
 comments: false
 comments_locked: false
