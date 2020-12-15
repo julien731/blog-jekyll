@@ -12,7 +12,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         $.ajax({
-            url: '//formspree.io/julien@liabeuf.fr',
+            url: '//formspree.io/f/xdopwbza',
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
