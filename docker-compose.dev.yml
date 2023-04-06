@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        - RUBY_ENV=development
+        - NODE_ENV=development
+    container_name: julienliabeuf_development
+    volumes:
+      - .:/julienliabeuf
+      - /julienliabeuf/node_modules/
+      - ruby-bundle:/bundle
+    ports:
+      - 4100:4100
+
+volumes:
+  ruby-bundle:
