@@ -1,4 +1,4 @@
-FROM ruby:3.1.3-slim
+FROM ruby:3.2.2-slim
 
 ARG RUBY_ENV=development
 ARG NODE_ENV=development
@@ -34,8 +34,6 @@ RUN npm install
 # Install Ruby dependencies
 COPY Gemfile* ./
 RUN chmod a+w Gemfile.lock
-RUN bundle update listen
-RUN gem install jekyll bundler
 
 RUN bundle install
 

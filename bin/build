@@ -1,3 +1,5 @@
 #!/bin/bash
 
-bundle exec jekyll build --config _config.yml
+if [ -z "$PORT" ]; then export PORT=4100; fi
+
+bundle exec foreman start -f Procfile.dev
