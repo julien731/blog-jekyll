@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  jekyll:
+    image: jekyll/jekyll:4.2.2
+    command: jekyll serve --watch --force_polling --verbose --incremental --livereload
+    container_name: julienliabeuf_development
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/srv/jekyll

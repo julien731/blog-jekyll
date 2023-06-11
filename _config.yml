@@ -48,3 +48,20 @@ social:
    googleplus:     +JulienLiabeuf
 
 google_analytics:  "UA-22409901-4"
+
+exclude:
+  - .github/
+  - .idea/
+  - bin/
+  - node_modules/
+  - resources/
+  - vendor/
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - package.json
+  - package-lock.json
+  - README.md
+  - docker-compose.dev.yml
+  - gulpfile.js
