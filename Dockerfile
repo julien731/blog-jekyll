@@ -34,7 +34,6 @@ RUN npm install
 # Install Ruby dependencies
 COPY Gemfile* ./
 RUN chmod a+w Gemfile.lock
-
 RUN bundle install
 
 # Copying the app files must be placed after the dependencies setup
