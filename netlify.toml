@@ -1,0 +1,6 @@
+[[plugins]]
+  # Installs the Lighthouse Build Plugin for all deploy contexts
+  package = "@netlify/plugin-lighthouse"
+
+[[context.production.plugins]]
+  package = "netlify-purge-cloudflare-on-deploy"
