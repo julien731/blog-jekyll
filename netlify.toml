@@ -1,0 +1,10 @@
+[[plugins]]
+  # Installs the Lighthouse Build Plugin for all deploy contexts
+  package = "@netlify/plugin-lighthouse"
+
+[[plugins]]
+  # Generates a sitemap.
+  package = "@netlify/plugin-sitemap"
+
+[[context.production.plugins]]
+  package = "netlify-purge-cloudflare-on-deploy"
