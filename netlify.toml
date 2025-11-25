@@ -5,7 +5,6 @@
 [[plugins]]
   # Installs the latest compatible version of the Lighthouse Build Plugin
   package = "@netlify/plugin-lighthouse"
-  version = "6.0.0"  # Ensures Node <21 compatibility
 
 [[plugins]]
   # Generates a sitemap.
