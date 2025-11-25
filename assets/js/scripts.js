@@ -1,3 +1,6 @@
+// Initialize responsive navigation
+var navigation = responsiveNav(".nav-collapse");
+
 // A $( document ).ready() block.
 $(document).ready(function () {
 
