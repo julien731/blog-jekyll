@@ -20,6 +20,8 @@ However, with the flexibility comes great potential for mess and for forgetting 
 
 This post introduces **Synapse**, the framework I'm developing for this experiment. I'm sharing it publicly because I think others might find it useful, but I want to be upfront: I don't know if this will work as well as I hope. It's an experiment.
 
+![Synapse PKM for Obsidian](/assets/images/2026-01-10-synapse-ai-first-pkm/obsidian-synapse.webp)
+
 ## An Investment With Low Return
 
 I have lots of resources saved. Some are relevant to certain projects, some are general knowledge, and some are related to ideas and self-reflection. However, connecting the dots, finding patterns, and uncovering insights is practically impossible.
