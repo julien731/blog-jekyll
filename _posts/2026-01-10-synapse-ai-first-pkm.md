@@ -34,6 +34,10 @@ I know that Notion has an MCP that can, to an extent, be used for what I'm descr
 
 I started researching Obsidian best practices to set up my vault and got to work. As I set up my workspace, however, one thing hit me: **most of the best practices out there are optimized for humans. My goal was to have an AI-first PKM.**
 
+![Notion migration, all done with Claude](/assets/images/2026-01-10-synapse-ai-first-pkm/notion-migration-obsidian-synapse.webp)
+
+_(The migration from Notion was entirely done with Claude, and Synapse includes a command for migrating resources from Notion.)_
+
 ## When It All Flipped
 
 What if we structured notes specifically for AI consumption? Not in a way that makes them significantly worse for humans, markdown is still markdown, but with deliberate choices about:
