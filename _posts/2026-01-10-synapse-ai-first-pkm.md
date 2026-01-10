@@ -24,19 +24,19 @@ This post introduces **Synapse**, the framework I'm developing for this experime
 
 ## An Investment With Low Return
 
-I have lots of resources saved. Some are relevant to certain projects, some are general knowledge, and some are related to ideas and self-reflection. However, connecting the dots, finding patterns, and uncovering insights is practically impossible.
+I have lots of resources saved in Notion. Some are relevant to certain projects, some are general knowledge, and some are related to ideas and self-reflection. However, connecting the dots, finding patterns, and uncovering insights is practically impossible in Notion.
 
-At the same time, I have been extensively embedding AI into my workflows: drafting documents, analyzing content, brainstorming ideas, writing code… And it is crystal clear that the benefits are enormous *when used efficiently.*
+At the same time, I have been extensively embedding AI into my workflows: drafting documents, analyzing content, brainstorming ideas, writing code... And it is crystal clear that the benefits are enormous *when used efficiently.*
 
-I have become increasingly frustrated by the challenges of working with AI assistants while providing all the relevant context, including my personal knowledge resources. When I stumbled on Jason's video, seeing him demonstrate how AI could help structure and organize thousands of notes and surface insights never seen before, pushed me to try moving to Obsidian.
+One thing that's become undeniable is that the more context, and the better the context I provide to LLMs, the better the results. Seeing Jason demonstrate how AI could help structure and organize thousands of notes and surface insights never seen before from his trove of notes and resources pushed me to try moving to Obsidian.
 
 I know that Notion has an MCP that can, to an extent, be used for what I'm describing, but using local `.md` files is infinitely more effective.
 
-I started researching Obsidian best practices to set up my vault and got to work. As I set up my workspace, however, one thing hit me: most of the best practices out there are optimized for humans. My goal was to have an AI-first PKM.
+I started researching Obsidian best practices to set up my vault and got to work. As I set up my workspace, however, one thing hit me: **most of the best practices out there are optimized for humans. My goal was to have an AI-first PKM.**
 
 ## When It All Flipped
 
-What if we structured notes specifically for AI consumption? Not in a way that makes them worse for humans, markdown is still markdown, but with deliberate choices about:
+What if we structured notes specifically for AI consumption? Not in a way that makes them significantly worse for humans, markdown is still markdown, but with deliberate choices about:
 
 - What metadata to include
 - How to write opening paragraphs
