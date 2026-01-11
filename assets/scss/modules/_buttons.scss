@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../config" as *;
+
 /***************
 BUTTON DEFAULTS
 ***************/
@@ -23,7 +26,7 @@ BUTTON DEFAULTS
   &:hover, &:focus {
     color: $white;
     text-decoration: none;
-    background-color: darken($primary-color, 10%);
+    background-color: color.adjust($primary-color, $lightness: -10%);
   }
   // end hover
 
@@ -46,7 +49,7 @@ BUTTON DEFAULTS
     background-color: $secondary-color;
 
     &:hover {
-      background-color: darken($secondary-color, 10%);
+      background-color: color.adjust($secondary-color, $lightness: -10%);
     }
   }
 
@@ -55,7 +58,7 @@ BUTTON DEFAULTS
     background-color: $tertiary-color;
 
     &:hover {
-      background-color: darken($tertiary-color, 10%);
+      background-color: color.adjust($tertiary-color, $lightness: -10%);
     }
   }
 }
@@ -72,4 +75,3 @@ BUTTON DEFAULTS
     color: $white;
   }
 }
-
