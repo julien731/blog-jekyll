@@ -7,7 +7,6 @@ title: Contact Julien
   <h1 class="pageTitle">Contact Me</h1>
   <div class="contactContent">
     <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible.</p>
-    <p>If you need code review or consulting services, please note that I charge $100 US per hour with a minimum of 1 hour.</p>
   </div>
   <form action="https://formspree.io/f/xdopwbza" method="post" id="contact-form">
     <label for="name">Name</label>
