@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Synapse: An Experiment in AI-First Personal Knowledge Management"
+description: "Introducing Synapse, a framework for structuring Obsidian vaults so AI assistants can effectively understand your personal knowledge."
 date: 2026-01-10 10:00:00.000000000 +07:00
 permalink: /synapse-ai-first-pkm
 comments: true
