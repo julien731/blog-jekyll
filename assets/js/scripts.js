@@ -1,6 +1,3 @@
-// Initialize responsive navigation
-var navigation = responsiveNav(".nav-collapse");
-
 // Helper function to serialize form data
 function serializeForm(form) {
     var formData = new FormData(form);
