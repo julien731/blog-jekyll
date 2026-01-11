@@ -1,6 +1,5 @@
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <title>
@@ -68,18 +67,18 @@
 
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/images/favicon-32x32.png" | prepend: site.baseurl }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/images/favicon-16x16.png" | prepend: site.baseurl }}">
+    <link rel="icon" type="image/x-icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/images/apple-touch-icon.png" | prepend: site.baseurl }}">
+    <link rel="manifest" href="{{ "/site.webmanifest" | prepend: site.baseurl }}">
 
     <!-- Come and get me RSS readers -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}">
-    <!--[if IE 8]><link rel="stylesheet" href="{{ "/assets/css/ie.css" | prepend: site.baseurl }}"><![endif]-->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-    <!-- Modernizr -->
-    <script src="{{ "/assets/js/modernizr.custom.15390.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 
     <!-- reCAPTCHA -->
     <script src='https://www.google.com/recaptcha/api.js'></script>

@@ -1,7 +1,11 @@
-body {
-  font-size: 137.5%;
-}
+@media only screen and (min-width: 1200px) {
 
-.container, .entry-comments {
-  max-width: 990px;
+  body {
+    font-size: 137.5%;
+  }
+
+  .container, .entry-comments {
+    max-width: 990px;
+  }
+
 }

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Product Backlog Ownership — Why It Matters
+description: "Why the Product Owner must be the sole owner of the backlog in Agile, and what happens when team members bypass this ownership."
 date: 2021-04-25 10:00:00.000000000 +07:00
 permalink: /why-backlog-ownership-matters
 comments: true

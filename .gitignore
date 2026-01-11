@@ -6,6 +6,9 @@ _site/
 .sass-cache/
 .jekyll-metadata
 
+### Sass ###
+*.css.map
+
 ### macOS ###
 *.DS_Store
 .AppleDouble
@@ -154,5 +157,8 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# Claude files
+.claude/settings.local.json
 
 # End of https://www.gitignore.io/api/macos,jekyll,windows,phpstorm,visualstudiocode,node

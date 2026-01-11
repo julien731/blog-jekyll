@@ -3,7 +3,7 @@ This blog is based on the [Long Haul](https://github.com/brianmaierjr/long-haul)
 ## Features
 
 - Minimal, Type Focused Design
-- Built with GULP + SASS + BROWSERSYNC + AUTOPREFIXER
+- Built with SASS + Jekyll LiveReload
 - JSON-LD
 - SVG Social Icons
 - Responsive Nav Menu
@@ -22,9 +22,16 @@ This blog is based on the [Long Haul](https://github.com/brianmaierjr/long-haul)
 3. Clone it
 4. [Install Bundler](http://bundler.io/)
 5. Run `bundle install`
-6. Install gulp dependencies by running `npm install`
-7. Run Jekyll and watch files by running `gulp`
+6. Run `npm install`
+7. Run `npm run dev` to start the development server with live reload
 8. Customize and watch the magic happen!
+
+## Available Scripts
+
+- `npm run dev` - Start development server with SASS watching and Jekyll live reload
+- `npm run build` - Build the site for production
+- `npm run sass` - Compile SASS once
+- `npm run sass:watch` - Watch SASS files for changes
 
 ## License
 
