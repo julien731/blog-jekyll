@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../config" as *;
+
 /***************
 GLOBAL STYLES
 ***************/
@@ -114,7 +117,7 @@ a {
   color: $link-color;
 
   &:hover {
-    color: darken($link-color, 15%);
+    color: color.adjust($link-color, $lightness: -15%);
   }
 }
 
@@ -136,7 +139,7 @@ MENU STYLING
       width: 100%;
       display: block;
       background: $background-color;
-      border-bottom: 2px solid lighten($background-color, 5%);
+      border-bottom: 2px solid color.adjust($background-color, $lightness: 5%);
 
       a {
         color: white;
@@ -185,7 +188,7 @@ MENU STYLING
 
   &:hover {
     color: white;
-    background-color: darken($background-color, 10%);
+    background-color: color.adjust($background-color, $lightness: -10%);
   }
 }
 
@@ -306,10 +309,10 @@ POST STYLING
 
   .meta {
     text-align: center;
-    color: lighten(black, 50%);
+    color: color.adjust(black, $lightness: 50%);
     font-family: $sans-serif;
     font-weight: 300;
-	
+
 	a {
 	  text-decoration: none;
 	}
@@ -322,7 +325,7 @@ POST STYLING
       text-align: center;
       font-size: .9em;
       font-style: italic;
-      color: lighten($black, 30%);
+      color: color.adjust($black, $lightness: 30%);
     }
 
     img {
@@ -360,8 +363,8 @@ POST NAV STYLING
 ***************/
 
 .postNav {
-  border-top: 1px solid darken(white, 10%);
-  border-bottom: 1px solid darken(white, 10%);
+  border-top: 1px solid color.adjust(white, $lightness: -10%);
+  border-bottom: 1px solid color.adjust(white, $lightness: -10%);
   overflow: hidden;
 
   .prev, .next {
@@ -437,7 +440,7 @@ FOOTER STYLING
   clear: both;
 
   .container {
-    border-top: 4px solid darken(white, 15%);
+    border-top: 4px solid color.adjust(white, $lightness: -15%);
     padding-top: .5em;
     max-width: 90%;
   }
@@ -482,7 +485,7 @@ FOOTER STYLING
           a {
             svg {
               .outer-shape {
-                fill: darken($primary-color, 10%);
+                fill: color.adjust($primary-color, $lightness: -10%);
               }
             }
           }
@@ -520,7 +523,7 @@ POST LIST STYLING
       position: absolute;
       bottom: -2rem;
       left: 0;
-      background: darken(white, 10%);
+      background: color.adjust(white, $lightness: -10%);
       height: 2px;
       width: 60px;
     }
@@ -534,7 +537,7 @@ POST LIST STYLING
     }
 
     .date {
-      color: lighten(black, 50%);
+      color: color.adjust(black, $lightness: 50%);
       font-family: $sans-serif;
       font-weight: 300;
       font-size: .8em;
@@ -545,4 +548,3 @@ POST LIST STYLING
     }
   }
 }
-
