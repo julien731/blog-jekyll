@@ -5,7 +5,7 @@
 	"headline":"{{ page.title }}",
 	"wordCount":"{{ page.content | number_of_words }}",
 	"url":"{{ page.url | prepend: site.url }}",
-	"datePublished":"{{ page.date | | date: '%Y-%m-%d' }}",
+	"datePublished":"{{ page.date | date: '%Y-%m-%d' }}",
 	"dateModified":"{{ page.dateModified | default: page.date | date: '%Y-%m-%d' }}",
 	"image":"{{ page.image | default: 'notebook.jpg' | prepend: '/assets/img/' | prepend: site.url }}",
 	"author":{
