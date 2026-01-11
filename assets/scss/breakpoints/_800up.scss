@@ -101,9 +101,12 @@
             }
           }
 
-          &.current {
-            padding-bottom: .25em;
+          &.current a {
             border-bottom: 4px solid rgba(255, 255, 255, .4);
+            padding: 0 0 6px 0;
+            margin: 0 .25em;
+            line-height: 1.2;
+            display: inline-block;
           }
         }
       }
