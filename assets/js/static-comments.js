@@ -1,52 +1,68 @@
 // Static comments
-(function ($) {
-    var $comments = $(".js-comments");
+(function () {
+    var comments = document.querySelector(".js-comments");
+    var commentForm = document.getElementById("comment-form");
 
-    $("#comment-form").submit(function () {
-        var form = this;
+    if (commentForm) {
+        commentForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var form = this;
 
-        $(form).addClass("disabled");
-        $("#comment-form-submit").html(
-            'Loading...'
-        );
+            form.classList.add("disabled");
+            var submitButton = document.getElementById("comment-form-submit");
+            submitButton.innerHTML = 'Loading...';
 
-        $.ajax({
-            type: $(this).attr("method"),
-            url: $(this).attr("action"),
-            data: $(this).serialize(),
-            contentType: "application/x-www-form-urlencoded",
-            success: function (data) {
-                $("#comment-form-submit")
-                    .html("Submitted")
-                    .addClass("btn--disabled");
-                $("#comment-form .js-notice")
-                    .removeClass("alert-danger")
-                    .addClass("alert-success");
+            // Serialize form data
+            var formData = new FormData(form);
+            var params = new URLSearchParams();
+            for (var pair of formData.entries()) {
+                params.append(pair[0], pair[1]);
+            }
+
+            fetch(form.action, {
+                method: form.method,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: params.toString()
+            })
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok');
+            })
+            .then(function (data) {
+                submitButton.innerHTML = "Submitted";
+                submitButton.classList.add("btn--disabled");
+                var notice = document.querySelector("#comment-form .js-notice");
+                notice.classList.remove("alert-danger");
+                notice.classList.add("alert-success");
                 showAlert(
                     '<strong>Thanks for your comment!</strong> It is <a href="https://github.com/julien731/blog-jekyll/pulls">currently pending</a> and will show on the site once approved.'
                 );
-            },
-            error: function (err) {
+            })
+            .catch(function (err) {
                 console.log(err);
-                $("#comment-form-submit").html("Submit Comment");
-                $("#comment-form .js-notice")
-                    .removeClass("alert-success")
-                    .addClass("alert-danger");
+                submitButton.innerHTML = "Submit Comment";
+                var notice = document.querySelector("#comment-form .js-notice");
+                notice.classList.remove("alert-success");
+                notice.classList.add("alert-danger");
                 showAlert(
                     "<strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
                 );
-                $(form).removeClass("disabled");
-            }
+                form.classList.remove("disabled");
+            });
         });
-
-        return false;
-    });
+    }
 
     function showAlert(message) {
-        $("#comment-form .js-notice").removeClass("hidden");
-        $("#comment-form .js-notice-text").html(message);
+        var notice = document.querySelector("#comment-form .js-notice");
+        var noticeText = document.querySelector("#comment-form .js-notice-text");
+        notice.classList.remove("hidden");
+        noticeText.innerHTML = message;
     }
-})(jQuery);
+})();
 
 // Staticman comment replies
 // modified from Wordpress https://core.svn.wordpress.org/trunk/wp-includes/js/comment-reply.js
