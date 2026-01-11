@@ -125,9 +125,13 @@ a {
 MENU STYLING
 ***************/
 
-.nav-collapse {
-  z-index: 1;
+// Hide checkbox (always)
+.nav-toggle-checkbox {
+  display: none;
+}
 
+// Nav menu base styles
+.nav-collapse {
   ul {
     margin: 0;
     padding: 0;
@@ -136,59 +140,86 @@ MENU STYLING
     list-style: none;
 
     li {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Mobile-only styles (max-width to avoid conflicts with desktop)
+@media only screen and (max-width: 799px) {
+  // Hamburger toggle button
+  .nav-toggle {
+    display: block;
+    float: right;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-right: 1rem;
+    background-color: $background-color;
+    border-radius: 4px;
+    position: relative;
+    z-index: 10;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: color.adjust($background-color, $lightness: -10%);
+    }
+
+    span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: white;
+      margin: 5px 0;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  // Nav menu mobile positioning
+  .nav-collapse {
+    position: absolute;
+    top: 3em;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 1;
+    transition: max-height 0.3s ease-in-out;
+
+    ul li {
       width: 100%;
       display: block;
       background: $background-color;
       border-bottom: 2px solid color.adjust($background-color, $lightness: 5%);
 
       a {
-        color: white;
-        text-decoration: none;
         display: block;
         padding: 5px 2rem;
       }
     }
   }
-}
 
-.js .nav-collapse {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
-  clear: both;
-  width: 100%;
-}
+  // Open state - when checkbox is checked
+  .nav-toggle-checkbox:checked ~ .nav-collapse {
+    max-height: 500px;
+  }
 
-.nav-collapse.opened {
-  max-height: 9999px;
-}
+  // Animate hamburger to X when open
+  .nav-toggle-checkbox:checked ~ .nav-toggle {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
 
-.nav-toggle {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  float: right;
-  line-height: 2em;
-  margin-top: .5em;
-  background-color: $background-color;
-  border-radius: 4px;
-  padding: 0 .5em;
-  color: white;
-  text-decoration: none;
-  position: relative;
-  right: 2rem;
-  transition: all 0.2s ease-in-out;
+    span:nth-child(2) {
+      opacity: 0;
+    }
 
-  &:hover {
-    color: white;
-    background-color: color.adjust($background-color, $lightness: -10%);
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
   }
 }
 

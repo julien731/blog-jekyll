@@ -117,24 +117,19 @@
   MENU STYLING
   ***************/
 
-  .js {
-
-    .nav-collapse {
-      position: relative;
-      max-height: none;
-
-      &.closed {
-        max-height: none;
-      }
-
-      ul li a {
-        display: inline-block;
-      }
-    }
-  }
-
+  .nav-toggle-checkbox,
   .nav-toggle {
     display: none;
+  }
+
+  .nav-collapse {
+    position: relative;
+    max-height: none;
+    overflow: visible;
+
+    ul li a {
+      display: inline-block;
+    }
   }
 
   /***************
