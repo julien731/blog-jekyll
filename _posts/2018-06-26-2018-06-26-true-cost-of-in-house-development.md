@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The True Cost of In-House Development
+description: "Hiring your own developer seems cheaper, but hidden costs add up. Learn why partnering with a dev shop may be more cost-effective."
 date: 2018-06-26 20:02:08.000000000 +07:00
 permalink: /true-cost-of-in-house-development
 comments: true
