@@ -16,7 +16,7 @@ I recently stumbled on [Jason Cyr's video on organizing Obsidian notes with AI,]
 
 After using Notion for years for personal knowledge management (PKM), I'm exploring a new workflow. I'm still using Notion and intend to continue, but not for everything. I'm a huge fan of Notion's databases. In my opinion, it is its superpower.
 
-However, with the flexibility comes great potential for mess and for forgetting information. In addition, it is difficult to get an overview of my personal knowledge and to find connections and insights.
+However, with great flexibility comes great potential for mess and for forgetting information. In addition, it is difficult to get an overview of my personal knowledge and to find connections and insights.
 
 This post introduces **Synapse**, the framework I'm developing for this experiment. I'm sharing it publicly because I think others might find it useful, but I want to be upfront: I don't know if this will work as well as I hope. It's an experiment.
 
@@ -28,9 +28,9 @@ I have lots of resources saved in Notion. Some are relevant to certain projects,
 
 At the same time, I have been extensively embedding AI into my workflows: drafting documents, analyzing content, brainstorming ideas, writing code... And it is crystal clear that the benefits are enormous *when used efficiently.*
 
-One thing that's become undeniable is that the more context, and the better the context I provide to LLMs, the better the results. Seeing Jason demonstrate how AI could help structure and organize thousands of notes and surface insights never seen before from his trove of notes and resources pushed me to try moving to Obsidian.
+One thing that’s become undeniable is that the more context and the better the context I provide to LLMs, the better the results. Seeing Jason demonstrate how AI could help structure and organize thousands of notes and surface insights never seen before from his trove of resources pushed me to try moving to Obsidian.
 
-I know that Notion has an MCP that can, to an extent, be used for what I'm describing, but using local `.md` files is infinitely more effective.
+I know that Notion has an MCP that can, to an extent, be used for what I’m describing, but using local `.md` files is infinitely more effective, and Notion’s block system makes it harder to use via the MCP. Each block needs to be parsed when a Markdown document can be digested all at once. And writing “in blocks” on Notion makes it hard for LLMs.
 
 I started researching Obsidian best practices to set up my vault and got to work. As I set up my workspace, however, one thing hit me: **most of the best practices out there are optimized for humans. My goal was to have an AI-first PKM.**
 
