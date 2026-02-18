@@ -30,6 +30,6 @@
 		"@type":"WebPage",
 		"@id":"{{ page.url | prepend: site.url }}"
 	},
-	"articleBody":"{{ page.content | strip_html | xml_escape | normalize_whitespace | strip_newlines | strip }}"
+	"articleBody":{{ page.content | strip_html | strip_newlines | strip | jsonify }}
 	}
 </script>
