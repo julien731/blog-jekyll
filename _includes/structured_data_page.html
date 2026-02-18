@@ -3,7 +3,6 @@
 	"@context":"http://schema.org",
 	"@type":"WebPage",
 	"headline":"{{ page.title }}",
-	{% if page.description %}"description":{{ page.description | jsonify }},{% endif %}
 	"wordCount":"{{ page.content | number_of_words }}",
 	"url":"{{ page.url | prepend: site.url }}",
 	"datePublished":"{{ page.date | date: '%Y-%m-%d' }}",
@@ -29,6 +28,7 @@
 		"@type":"WebPage",
 		"@id":"{{ page.url | prepend: site.url }}"
 	},
-	"articleBody":{{ page.content | strip_html | strip_newlines | strip | jsonify }}
+	"articleBody":{{ page.content | strip_html | strip_newlines | strip | jsonify }}{% if page.description %},
+	"description":{{ page.description | jsonify }}{% endif %}
 	}
 </script>

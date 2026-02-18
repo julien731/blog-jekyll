@@ -3,7 +3,6 @@
 	"@context":"http://schema.org",
 	"@type":"BlogPosting",
 	"headline":"{{ page.title }}",
-	{% if page.description %}"description":{{ page.description | jsonify }},{% endif %}
 	"genre":"{{ page.categories | join: ', ' }}",
 	"keywords":"{{ page.tags | join: ', ' }}",
 	"wordCount":"{{ page.content | number_of_words }}",
@@ -31,6 +30,7 @@
 		"@type":"WebPage",
 		"@id":"{{ page.url | prepend: site.url }}"
 	},
-	"articleBody":{{ page.content | strip_html | strip_newlines | strip | jsonify }}
+	"articleBody":{{ page.content | strip_html | strip_newlines | strip | jsonify }}{% if page.description %},
+	"description":{{ page.description | jsonify }}{% endif %}
 	}
 </script>
