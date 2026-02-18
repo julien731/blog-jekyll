@@ -4,11 +4,11 @@
 	"@type":"Comment",
 	"author":{
 		"@type":"Person",
-		"name":"{{ include.name }}",
+		"name":{{ include.name | jsonify }},
 		"url":"{{ include.url }}"
 	},
 	"datePublished":"{{ include.date | date_to_xmlschema }}",
 	"discussionUrl":"{{ site.url }}#comment{% if r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}",
-	"text":"{{ include.message }}"
+	"text":{{ include.message | jsonify }}
 	}
 </script>
