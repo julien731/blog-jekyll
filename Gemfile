@@ -17,6 +17,7 @@ gem "jekyll", "~> 4.3.2"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-paginate"
+  gem "jekyll-sitemap"
   gem "support-for"
   gem 'jekyll-compose', group: [:jekyll_plugins]
 end

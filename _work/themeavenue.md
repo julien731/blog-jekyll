@@ -1,7 +1,7 @@
 ---
 date: 2016-09-08T15:43:53+07:00
 title: ThemeAvenue
-description: ThemeAvenue, originally a theme shop, pivoted towards product development. It has been the home of some very successful products
+description: "ThemeAvenue, originally a theme shop, pivoted towards product development. It has been the home of some very successful products."
 ---
 
 <p class="intro">ThemeAvenue, originally a theme shop, pivoted towards product development. It has been the home of some very successful products.</p>
