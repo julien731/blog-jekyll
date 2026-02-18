@@ -7,7 +7,7 @@
 	"keywords":"{{ page.tags | join: ', ' }}",
 	"wordCount":"{{ page.content | number_of_words }}",
 	"url":"{{ page.url | prepend: site.url }}",
-	"datePublished":"{{ page.date | | date: '%Y-%m-%d' }}",
+	"datePublished":"{{ page.date | date: '%Y-%m-%d' }}",
 	"dateModified":"{{ page.dateModified | default: page.date | date: '%Y-%m-%d' }}",
 	"image":"{{ page.image | default: 'notebook.jpg' | prepend: '/assets/img/' | prepend: site.url }}",
 	"author":{
@@ -30,6 +30,6 @@
 		"@type":"WebPage",
 		"@id":"{{ page.url | prepend: site.url }}"
 	},
-	"articleBody":"{{ page.content | strip_html | xml_escape | normalize_whitepace | strip_newlines | strip }}"
+	"articleBody":{{ page.content | strip_html | strip_newlines | strip | jsonify }}
 	}
 </script>
