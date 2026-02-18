@@ -2,7 +2,7 @@
 layout: work
 date: 2016-09-07T22:41:33+07:00
 title: Awesome Support
-description: Awesome Support is the most versatile help desk and support software for WordPress. It transforms your existing WordPress site into a fully functional ticketing system
+description: "Awesome Support is the most versatile help desk and support software for WordPress. It transforms your existing WordPress site into a fully functional ticketing system."
 ---
 
 <p class="intro">Awesome Support is the most versatile help desk and support software for WordPress. It transforms your existing WordPress site into a fully functional ticketing system.</p>

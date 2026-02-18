@@ -9,7 +9,7 @@
 	"url":"{{ page.url | prepend: site.url }}",
 	"datePublished":"{{ page.date | date: '%Y-%m-%d' }}",
 	"dateModified":"{{ page.dateModified | default: page.date | date: '%Y-%m-%d' }}",
-	"image":"{{ page.image | default: 'notebook.jpg' | prepend: '/assets/img/' | prepend: site.url }}",
+	"image":"{{ page.image | default: 'site/default-social-card-notebook.jpg' | prepend: '/assets/images/' | prepend: site.url }}",
 	"author":{
 		"@type":"Person",
 			"name":"Julien Liabeuf",
@@ -30,6 +30,7 @@
 		"@type":"WebPage",
 		"@id":"{{ page.url | prepend: site.url }}"
 	},
-	"articleBody":{{ page.content | strip_html | strip_newlines | strip | jsonify }}
+	"articleBody":{{ page.content | strip_html | strip_newlines | strip | jsonify }}{% if page.description %},
+	"description":{{ page.description | jsonify }}{% endif %}
 	}
 </script>
